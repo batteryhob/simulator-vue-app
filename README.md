@@ -1,29 +1,12 @@
 # simulator-vue-app
+해당 앱은 카트라이더 전적 검색 TMI 사이트(https://tmi.nexon.com)에서 전적 시뮬레이터에서 사용된 UI와 프론트 앱입니다.
+해당 앱은 오픈소스용 데모이며 실제 서비스되고 있는 앱과 다를 수 있습니다.
+해당 앱은 기업의 보안을 방해하는 정보는 들어있지 않습니다.
 
-## Project setup
-```
-yarn install
-```
+# 세팅
+npm install로 필요한 패키지를 설치해줍니다.
+- vuex
+- vue-router
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# CSS
+css는 외부프로젝트에서 빌드된 파일이 포함되어 있습니다.

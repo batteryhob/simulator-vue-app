@@ -1,0 +1,6834 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block
+}
+
+ul, ol {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+    blockquote:before, blockquote:after, q:before, q:after {
+        content: "";
+        content: none
+    }
+
+em, dfn, i {
+    font-style: normal
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none
+}
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none
+}
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold
+}
+
+del {
+    text-decoration: line-through
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+hr {
+    display: none
+}
+
+input, select {
+    vertical-align: middle
+}
+
+input {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0
+}
+
+    input[type="checkbox"] {
+        appearance: none
+    }
+
+    input[type="text"]::-ms-clear {
+        display: none;
+        width: 0;
+        height: 0
+    }
+
+    input[type="text"]::-ms-reveal {
+        display: none;
+        width: 0;
+        height: 0
+    }
+
+    input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-results-button, input[type="search"]::-webkit-search-results-decoration {
+        display: none
+    }
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 300;
+    src: local(※),url(/fonts/NotoSansKR-Light.woff2) format("woff2"),url(/fonts/NotoSansKR-Light.woff) format("woff"),url(/fonts/NotoSansKR-Light.otf) format("opentype")
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 400;
+    src: local(※),url(/fonts/NotoSansKR-Regular.woff2) format("woff2"),url(/fonts/NotoSansKR-Regular.woff) format("woff"),url(/fonts/NotoSansKR-Regular.otf) format("opentype")
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 500;
+    src: local(※),url(/fonts/NotoSansKR-Medium.woff2) format("woff2"),url(/fonts/NotoSansKR-Medium.woff) format("woff"),url(/fonts/NotoSansKR-Medium.otf) format("opentype")
+}
+
+@font-face {
+    font-family: "Noto Sans KR";
+    font-style: normal;
+    font-weight: 700;
+    src: local(※),url(/fonts/NotoSansKR-Bold.woff2) format("woff2"),url(/fonts/NotoSansKR-Bold.woff) format("woff"),url(/fonts/NotoSansKR-Bold.otf) format("opentype")
+}
+
+html, body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: "Noto Sans KR";
+    font-size: 12px;
+    font-weight: 400;
+    color: #FFF;
+    letter-spacing: -1px;
+    background-color: #1f1f36
+}
+
+#wrap {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 320px
+}
+
+    #wrap #subheader {
+        height: 40px;
+        line-height: 40px;
+        background-color: #4c4f62;
+        display: flex
+    }
+
+        #wrap #subheader .logo {
+            position: relative;
+            flex: 1;
+            background-color: #373d50;
+            text-align: center
+        }
+
+            #wrap #subheader .logo img {
+                height: 13px;
+                vertical-align: middle;
+                opacity: .3
+            }
+
+            #wrap #subheader .logo:after {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                top: 17px;
+                right: 10px;
+                width: 5px;
+                height: 10px;
+                border: solid;
+                border-width: 0px 2px 0px 2px;
+                border-color: #5d6170
+            }
+
+        #wrap #subheader .search {
+            position: relative;
+            flex: 3
+        }
+
+            #wrap #subheader .search input[type="text"] {
+                padding: 0px 10px 0px 10px;
+                width: 70%;
+                height: 100%;
+                font-family: "Noto Sans KR";
+                font-size: 13px;
+                background-color: transparent;
+                outline: 0;
+                color: #fff;
+                border: none
+            }
+
+            #wrap #subheader .search i {
+                position: absolute;
+                top: 14px;
+                right: 20px;
+                font-size: 1.3rem;
+                opacity: .3;
+                transition: .3s all ease-in
+            }
+
+                #wrap #subheader .search i:hover {
+                    opacity: 1
+                }
+
+    #wrap #bar {
+        position: relative;
+        padding: 10px;
+        color: rgba(255,255,255,0.5)
+    }
+
+        #wrap #bar p {
+            margin-bottom: 5px
+        }
+
+        #wrap #bar .friendswrap {
+            overflow: hidden
+        }
+
+            #wrap #bar .friendswrap .friends {
+                display: inline-block
+            }
+
+                #wrap #bar .friendswrap .friends ul {
+                    display: flex;
+                    flex-direction: row;
+                    text-align: center;
+                    white-space: nowrap
+                }
+
+                    #wrap #bar .friendswrap .friends ul li {
+                        flex: 0 0 auto;
+                        margin-left: 5px
+                    }
+
+                        #wrap #bar .friendswrap .friends ul li span {
+                            display: inline-block;
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            height: 25px;
+                            line-height: 25px;
+                            border: 1px solid rgba(255,255,255,0.5);
+                            border-radius: 20px;
+                            cursor: pointer
+                        }
+
+    #wrap #versus {
+        padding: 10px 10px 10px 10px
+    }
+
+        #wrap #versus .compareview {
+            margin-bottom: 20px;
+            text-align: center
+        }
+
+            #wrap #versus .compareview .riders {
+                padding-top: 10px;
+                padding-bottom: 20px;
+                display: flex;
+                text-align: center
+            }
+
+                #wrap #versus .compareview .riders .left {
+                    flex: 3
+                }
+
+                    #wrap #versus .compareview .riders .left .nick {
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 1.2rem
+                    }
+
+                        #wrap #versus .compareview .riders .left .nick .license {
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 20px;
+                            height: 20px;
+                            margin-top: -5px;
+                            margin-left: 5px
+                        }
+
+                            #wrap #versus .compareview .riders .left .nick .license.beginner {
+                                background: url(/img/icon_beginner.png) no-repeat center;
+                                background-size: contain
+                            }
+
+                            #wrap #versus .compareview .riders .left .nick .license.rookie {
+                                background: url(/img/icon_rookie.png) no-repeat center;
+                                background-size: contain
+                            }
+
+                            #wrap #versus .compareview .riders .left .nick .license.l3 {
+                                background: url(/img/icon_l3.png) no-repeat center;
+                                background-size: contain
+                            }
+
+                            #wrap #versus .compareview .riders .left .nick .license.l2 {
+                                background: url(/img/icon_l2.png) no-repeat center;
+                                background-size: contain
+                            }
+
+                            #wrap #versus .compareview .riders .left .nick .license.l1 {
+                                background: url(/img/icon_l1.png) no-repeat center;
+                                background-size: contain
+                            }
+
+                            #wrap #versus .compareview .riders .left .nick .license.pro {
+                                background: url(/img/icon_pro.png) no-repeat center;
+                                background-size: contain
+                            }
+
+                    #wrap #versus .compareview .riders .left .thumbnail .character {
+                        height: 70px
+                    }
+
+                    #wrap #versus .compareview .riders .left .factor {
+                        margin-top: 20px
+                    }
+
+                        #wrap #versus .compareview .riders .left .factor .kart {
+                            position: relative;
+                            display: inline-block;
+                            width: 85px;
+                            height: 60px;
+                            border: 1px solid rgba(255,255,255,0.5);
+                            border-radius: 10px
+                        }
+
+                            #wrap #versus .compareview .riders .left .factor .kart:before {
+                                content: "";
+                                position: absolute;
+                                top: 45%;
+                                right: 5px;
+                                width: 0;
+                                height: 0;
+                                border-left: 5px solid transparent;
+                                border-right: 5px solid transparent;
+                                border-top: 5px solid rgba(255,255,255,0.5)
+                            }
+
+                            #wrap #versus .compareview .riders .left .factor .kart:hover {
+                                background-color: rgba(255,255,255,0.5)
+                            }
+
+                            #wrap #versus .compareview .riders .left .factor .kart img {
+                                margin-top: 5px;
+                                height: 30px
+                            }
+
+                #wrap #versus .compareview .riders .center {
+                    position: relative;
+                    flex: 1
+                }
+
+                    #wrap #versus .compareview .riders .center .simulate {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%)
+                    }
+
+                #wrap #versus .compareview .riders .right {
+                    flex: 3
+                }
+
+                    #wrap #versus .compareview .riders .right .nick {
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 1.2rem
+                    }
+
+                        #wrap #versus .compareview .riders .right .nick .license {
+                            display: inline-block;
+                            vertical-align: middle;
+                            width: 20px;
+                            height: 20px;
+                            margin-top: -5px;
+                            margin-left: 5px
+                        }
+
+                            #wrap #versus .compareview .riders .right .nick .license.beginner {
+                                background: url(/img/icon_beginner.png) no-repeat center;
+                                background-size: contain
+                            }
+
+                            #wrap #versus .compareview .riders .right .nick .license.rookie {
+                                background: url(/img/icon_rookie.png) no-repeat center;
+                                background-size: contain
+                            }
+
+                            #wrap #versus .compareview .riders .right .nick .license.l3 {
+                                background: url(/img/icon_l3.png) no-repeat center;
+                                background-size: contain
+                            }
+
+                            #wrap #versus .compareview .riders .right .nick .license.l2 {
+                                background: url(/img/icon_l2.png) no-repeat center;
+                                background-size: contain
+                            }
+
+                            #wrap #versus .compareview .riders .right .nick .license.l1 {
+                                background: url(/img/icon_l1.png) no-repeat center;
+                                background-size: contain
+                            }
+
+                            #wrap #versus .compareview .riders .right .nick .license.pro {
+                                background: url(/img/icon_pro.png) no-repeat center;
+                                background-size: contain
+                            }
+
+                    #wrap #versus .compareview .riders .right .thumbnail .character {
+                        height: 70px;
+                        transform: scaleX(-1)
+                    }
+
+                    #wrap #versus .compareview .riders .right .factor {
+                        margin-top: 20px
+                    }
+
+                        #wrap #versus .compareview .riders .right .factor .kart {
+                            position: relative;
+                            display: inline-block;
+                            width: 85px;
+                            height: 60px;
+                            border: 1px solid rgba(255,255,255,0.5);
+                            border-radius: 10px
+                        }
+
+                            #wrap #versus .compareview .riders .right .factor .kart:before {
+                                content: "";
+                                position: absolute;
+                                top: 45%;
+                                right: 5px;
+                                width: 0;
+                                height: 0;
+                                border-left: 5px solid transparent;
+                                border-right: 5px solid transparent;
+                                border-top: 5px solid rgba(255,255,255,0.5)
+                            }
+
+                            #wrap #versus .compareview .riders .right .factor .kart:hover {
+                                background-color: rgba(255,255,255,0.5)
+                            }
+
+                            #wrap #versus .compareview .riders .right .factor .kart img {
+                                transform: scaleX(-1);
+                                margin-top: 5px;
+                                height: 30px
+                            }
+
+                    #wrap #versus .compareview .riders .right .search {
+                        height: 40px;
+                        line-height: 40px;
+                        font-size: 1.2rem
+                    }
+
+                    #wrap #versus .compareview .riders .right .notarget {
+                        color: rgba(255,255,255,0.3)
+                    }
+
+        #wrap #versus .factorview {
+            margin-bottom: 20px;
+            background-color: #3a4259
+        }
+
+            #wrap #versus .factorview .title {
+                padding: 10px
+            }
+
+                #wrap #versus .factorview .title .desc {
+                    margin-top: 10px;
+                    font-size: 1.2rem;
+                    border-bottom: 1px solid rgba(255,255,255,0.3)
+                }
+
+                    #wrap #versus .factorview .title .desc .sub {
+                        font-size: 1rem;
+                        opacity: 0.3;
+                        margin-bottom: 10px
+                    }
+
+            #wrap #versus .factorview .config {
+                padding: 10px
+            }
+
+                #wrap #versus .factorview .config .conditions .sliderdiv {
+                    display: flex;
+                    height: 50px;
+                    line-height: 50px;
+                    color: rgba(255,255,255,0.3)
+                }
+
+                    #wrap #versus .factorview .config .conditions .sliderdiv .nick {
+                        flex: 1.5;
+                        color: #03d387
+                    }
+
+                    #wrap #versus .factorview .config .conditions .sliderdiv .drag {
+                        position: relative;
+                        flex: 2.5;
+                        padding-left: 20px;
+                        padding-right: 50px
+                    }
+
+                        #wrap #versus .factorview .config .conditions .sliderdiv .drag #slider1 {
+                            margin-top: 20px;
+                            height: 10px;
+                            border: none;
+                            -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+                            -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+                            box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3)
+                        }
+
+                            #wrap #versus .factorview .config .conditions .sliderdiv .drag #slider1 .noUi-connect {
+                                background: #3975f9;
+                                border-radius: 3px
+                            }
+
+                            #wrap #versus .factorview .config .conditions .sliderdiv .drag #slider1 .noUi-handle {
+                                border-radius: 25px;
+                                width: 20px;
+                                height: 20px
+                            }
+
+                                #wrap #versus .factorview .config .conditions .sliderdiv .drag #slider1 .noUi-handle:before {
+                                    display: none
+                                }
+
+                                #wrap #versus .factorview .config .conditions .sliderdiv .drag #slider1 .noUi-handle:after {
+                                    display: none
+                                }
+
+                        #wrap #versus .factorview .config .conditions .sliderdiv .drag #slider2 {
+                            margin-top: 20px;
+                            height: 10px;
+                            border: none;
+                            -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+                            -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+                            box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3)
+                        }
+
+                            #wrap #versus .factorview .config .conditions .sliderdiv .drag #slider2 .noUi-connect {
+                                background: #F62459;
+                                border-radius: 3px
+                            }
+
+                            #wrap #versus .factorview .config .conditions .sliderdiv .drag #slider2 .noUi-handle {
+                                border-radius: 25px;
+                                width: 20px;
+                                height: 20px
+                            }
+
+                                #wrap #versus .factorview .config .conditions .sliderdiv .drag #slider2 .noUi-handle:before {
+                                    display: none
+                                }
+
+                                #wrap #versus .factorview .config .conditions .sliderdiv .drag #slider2 .noUi-handle:after {
+                                    display: none
+                                }
+
+                        #wrap #versus .factorview .config .conditions .sliderdiv .drag span {
+                            position: absolute;
+                            top: 0px;
+                            right: 20px;
+                            color: #fff
+                        }
+
+                #wrap #versus .factorview .config .maps {
+                    position: relative
+                }
+
+                    #wrap #versus .factorview .config .maps .setup {
+                        position: absolute;
+                        top: 0px;
+                        right: 5px;
+                        color: rgba(255,255,255,0.5);
+                        cursor: pointer
+                    }
+
+                    #wrap #versus .factorview .config .maps .gallerywrap {
+                        overflow: hidden
+                    }
+
+                        #wrap #versus .factorview .config .maps .gallerywrap .gallery {
+                            display: inline-block
+                        }
+
+                            #wrap #versus .factorview .config .maps .gallerywrap .gallery ul {
+                                display: flex
+                            }
+
+                                #wrap #versus .factorview .config .maps .gallerywrap .gallery ul li {
+                                    width: 100px;
+                                    min-width: 100px;
+                                    text-align: center;
+                                    margin-right: 20px
+                                }
+
+                                    #wrap #versus .factorview .config .maps .gallerywrap .gallery ul li .thumbnail {
+                                        position: relative;
+                                        height: 80px;
+                                        background-color: rgba(0,0,0,0.3);
+                                        margin-top: 10px;
+                                        margin-bottom: 10px
+                                    }
+
+                                        #wrap #versus .factorview .config .maps .gallerywrap .gallery ul li .thumbnail img {
+                                            width: 100%;
+                                            height: 100%
+                                        }
+
+                                        #wrap #versus .factorview .config .maps .gallerywrap .gallery ul li .thumbnail span {
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                            color: rgba(255,255,255,0.5);
+                                            font-size: 1.5rem
+                                        }
+
+                #wrap #versus .factorview .config .buttons {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    text-align: center
+                }
+
+                    #wrap #versus .factorview .config .buttons .run {
+                        display: inline-block;
+                        width: 100px;
+                        height: 30px;
+                        background-color: #3975f9;
+                        border: none;
+                        border-radius: 25px;
+                        color: #fff;
+                        -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+                        -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+                        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3)
+                    }
+
+                        #wrap #versus .factorview .config .buttons .run:active {
+                            background-color: #03d387;
+                            box-shadow: none
+                        }
+
+                        #wrap #versus .factorview .config .buttons .run:hover {
+                            background-color: #03d387;
+                            box-shadow: none
+                        }
+
+                #wrap #versus .factorview .config .cs-loader {
+                    display: none;
+                    position: relative;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    height: 30px
+                }
+
+                    #wrap #versus .factorview .config .cs-loader .cs-loader-inner {
+                        transform: translateY(-50%);
+                        top: 50%;
+                        position: absolute;
+                        width: calc(100% - 200px);
+                        color: #3975f9;
+                        padding: 0 100px;
+                        text-align: center
+                    }
+
+                        #wrap #versus .factorview .config .cs-loader .cs-loader-inner label {
+                            font-size: 1rem;
+                            opacity: 0;
+                            display: inline-block;
+                            text-shadow: 5px 5px 5px rgba(0,0,0,0.3)
+                        }
+
+@keyframes lol {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px)
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+
+    66% {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(300px)
+    }
+}
+
+@-webkit-keyframes lol {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-300px)
+    }
+
+    33% {
+        opacity: 1;
+        -webkit-transform: translateX(0px)
+    }
+
+    66% {
+        opacity: 1;
+        -webkit-transform: translateX(0px)
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(300px)
+    }
+}
+
+#wrap #versus .factorview .config .cs-loader .cs-loader-inner label:nth-child(6) {
+    -webkit-animation: lol 3s infinite ease-in-out;
+    animation: lol 3s infinite ease-in-out
+}
+
+#wrap #versus .factorview .config .cs-loader .cs-loader-inner label:nth-child(5) {
+    -webkit-animation: lol 3s 100ms infinite ease-in-out;
+    animation: lol 3s 100ms infinite ease-in-out
+}
+
+#wrap #versus .factorview .config .cs-loader .cs-loader-inner label:nth-child(4) {
+    -webkit-animation: lol 3s 200ms infinite ease-in-out;
+    animation: lol 3s 200ms infinite ease-in-out
+}
+
+#wrap #versus .factorview .config .cs-loader .cs-loader-inner label:nth-child(3) {
+    -webkit-animation: lol 3s 300ms infinite ease-in-out;
+    animation: lol 3s 300ms infinite ease-in-out
+}
+
+#wrap #versus .factorview .config .cs-loader .cs-loader-inner label:nth-child(2) {
+    -webkit-animation: lol 3s 400ms infinite ease-in-out;
+    animation: lol 3s 400ms infinite ease-in-out
+}
+
+#wrap #versus .factorview .config .cs-loader .cs-loader-inner label:nth-child(1) {
+    -webkit-animation: lol 3s 500ms infinite ease-in-out;
+    animation: lol 3s 500ms infinite ease-in-out
+}
+
+#wrap #versus .matchview {
+    margin-bottom: 20px;
+    background-color: #3a4259;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s all ease-in;
+    height: 0
+}
+
+    #wrap #versus .matchview.on {
+        visibility: visible;
+        opacity: 1;
+        height: auto
+    }
+
+    #wrap #versus .matchview .title {
+        padding: 10px
+    }
+
+        #wrap #versus .matchview .title .desc {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.3)
+        }
+
+            #wrap #versus .matchview .title .desc .sub {
+                font-size: 1rem;
+                opacity: 0.3;
+                margin-bottom: 10px
+            }
+
+    #wrap #versus .matchview ul li .name {
+        text-align: center
+    }
+
+    #wrap #versus .matchview ul li .graph {
+        display: flex;
+        height: 80px
+    }
+
+        #wrap #versus .matchview ul li .graph .left {
+            position: relative;
+            flex: 3.5;
+            margin-left: 60px
+        }
+
+            #wrap #versus .matchview ul li .graph .left .bar {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                margin-top: -10px;
+                background-color: #3975f9;
+                width: calc(0%);
+                height: 20px;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+                -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+                transition: all 1s ease-in
+            }
+
+                #wrap #versus .matchview ul li .graph .left .bar .text {
+                    position: absolute;
+                    left: -40px
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on1 {
+                    width: 1%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on2 {
+                    width: 2%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on3 {
+                    width: 3%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on4 {
+                    width: 4%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on5 {
+                    width: 5%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on6 {
+                    width: 6%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on7 {
+                    width: 7%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on8 {
+                    width: 8%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on9 {
+                    width: 9%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on10 {
+                    width: 10%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on11 {
+                    width: 11%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on12 {
+                    width: 12%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on13 {
+                    width: 13%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on14 {
+                    width: 14%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on15 {
+                    width: 15%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on16 {
+                    width: 16%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on17 {
+                    width: 17%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on18 {
+                    width: 18%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on19 {
+                    width: 19%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on20 {
+                    width: 20%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on21 {
+                    width: 21%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on22 {
+                    width: 22%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on23 {
+                    width: 23%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on24 {
+                    width: 24%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on25 {
+                    width: 25%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on26 {
+                    width: 26%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on27 {
+                    width: 27%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on28 {
+                    width: 28%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on29 {
+                    width: 29%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on30 {
+                    width: 30%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on31 {
+                    width: 31%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on32 {
+                    width: 32%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on33 {
+                    width: 33%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on34 {
+                    width: 34%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on35 {
+                    width: 35%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on36 {
+                    width: 36%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on37 {
+                    width: 37%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on38 {
+                    width: 38%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on39 {
+                    width: 39%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on40 {
+                    width: 40%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on41 {
+                    width: 41%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on42 {
+                    width: 42%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on43 {
+                    width: 43%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on44 {
+                    width: 44%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on45 {
+                    width: 45%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on46 {
+                    width: 46%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on47 {
+                    width: 47%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on48 {
+                    width: 48%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on49 {
+                    width: 49%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on50 {
+                    width: 50%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on51 {
+                    width: 51%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on52 {
+                    width: 52%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on53 {
+                    width: 53%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on54 {
+                    width: 54%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on55 {
+                    width: 55%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on56 {
+                    width: 56%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on57 {
+                    width: 57%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on58 {
+                    width: 58%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on59 {
+                    width: 59%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on60 {
+                    width: 60%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on61 {
+                    width: 61%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on62 {
+                    width: 62%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on63 {
+                    width: 63%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on64 {
+                    width: 64%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on65 {
+                    width: 65%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on66 {
+                    width: 66%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on67 {
+                    width: 67%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on68 {
+                    width: 68%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on69 {
+                    width: 69%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on70 {
+                    width: 70%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on71 {
+                    width: 71%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on72 {
+                    width: 72%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on73 {
+                    width: 73%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on74 {
+                    width: 74%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on75 {
+                    width: 75%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on76 {
+                    width: 76%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on77 {
+                    width: 77%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on78 {
+                    width: 78%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on79 {
+                    width: 79%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on80 {
+                    width: 80%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on81 {
+                    width: 81%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on82 {
+                    width: 82%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on83 {
+                    width: 83%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on84 {
+                    width: 84%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on85 {
+                    width: 85%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on86 {
+                    width: 86%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on87 {
+                    width: 87%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on88 {
+                    width: 88%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on89 {
+                    width: 89%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on90 {
+                    width: 90%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on91 {
+                    width: 91%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on92 {
+                    width: 92%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on93 {
+                    width: 93%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on94 {
+                    width: 94%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on95 {
+                    width: 95%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on96 {
+                    width: 96%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on97 {
+                    width: 97%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on98 {
+                    width: 98%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on99 {
+                    width: 99%
+                }
+
+                #wrap #versus .matchview ul li .graph .left .bar.on100 {
+                    width: 100%
+                }
+
+        #wrap #versus .matchview ul li .graph .center {
+            position: relative;
+            flex: 1.5;
+            text-align: center;
+            padding-top: 25px
+        }
+
+            #wrap #versus .matchview ul li .graph .center .circle-loader {
+                margin-bottom: 1em;
+                border: 3px solid rgba(0,0,0,0.2);
+                border-left-color: #03d387;
+                animation: loader-spin 1.2s infinite linear;
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                border-radius: 50%;
+                width: 2em;
+                height: 2em
+            }
+
+            #wrap #versus .matchview ul li .graph .center .complete {
+                -webkit-animation: none;
+                animation: none;
+                border-color: #03d387;
+                transition: border 500ms ease-out
+            }
+
+            #wrap #versus .matchview ul li .graph .center .checkmark.draw:after {
+                animation-duration: 800ms;
+                animation-timing-function: ease;
+                animation-name: checkmark;
+                transform: scaleX(-1) rotate(135deg)
+            }
+
+            #wrap #versus .matchview ul li .graph .center .checkmark:after {
+                opacity: 1;
+                height: 1em;
+                width: .5em;
+                transform-origin: left top;
+                border-right: 3px solid #03d387;
+                border-top: 3px solid #03d387;
+                content: '';
+                left: .5em;
+                top: 1em;
+                margin-left: -2px;
+                position: absolute
+            }
+
+@keyframes loader-spin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes checkmark {
+    0% {
+        height: 0;
+        width: 0;
+        opacity: 1
+    }
+
+    20% {
+        height: 0;
+        width: .5em;
+        opacity: 1
+    }
+
+    40% {
+        height: 1em;
+        width: .5em;
+        opacity: 1
+    }
+
+    100% {
+        height: 1em;
+        width: .5em;
+        opacity: 1
+    }
+}
+
+#wrap #versus .matchview ul li .graph .right {
+    position: relative;
+    flex: 3.5;
+    margin-right: 60px
+}
+
+    #wrap #versus .matchview ul li .graph .right .bar {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-top: -10px;
+        background-color: #F62459;
+        width: calc(0%);
+        height: 20px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+        -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+        transition: all 1s ease-in
+    }
+
+        #wrap #versus .matchview ul li .graph .right .bar .text {
+            position: absolute;
+            right: -40px
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on1 {
+            width: 1%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on2 {
+            width: 2%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on3 {
+            width: 3%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on4 {
+            width: 4%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on5 {
+            width: 5%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on6 {
+            width: 6%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on7 {
+            width: 7%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on8 {
+            width: 8%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on9 {
+            width: 9%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on10 {
+            width: 10%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on11 {
+            width: 11%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on12 {
+            width: 12%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on13 {
+            width: 13%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on14 {
+            width: 14%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on15 {
+            width: 15%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on16 {
+            width: 16%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on17 {
+            width: 17%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on18 {
+            width: 18%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on19 {
+            width: 19%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on20 {
+            width: 20%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on21 {
+            width: 21%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on22 {
+            width: 22%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on23 {
+            width: 23%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on24 {
+            width: 24%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on25 {
+            width: 25%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on26 {
+            width: 26%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on27 {
+            width: 27%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on28 {
+            width: 28%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on29 {
+            width: 29%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on30 {
+            width: 30%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on31 {
+            width: 31%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on32 {
+            width: 32%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on33 {
+            width: 33%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on34 {
+            width: 34%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on35 {
+            width: 35%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on36 {
+            width: 36%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on37 {
+            width: 37%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on38 {
+            width: 38%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on39 {
+            width: 39%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on40 {
+            width: 40%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on41 {
+            width: 41%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on42 {
+            width: 42%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on43 {
+            width: 43%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on44 {
+            width: 44%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on45 {
+            width: 45%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on46 {
+            width: 46%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on47 {
+            width: 47%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on48 {
+            width: 48%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on49 {
+            width: 49%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on50 {
+            width: 50%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on51 {
+            width: 51%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on52 {
+            width: 52%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on53 {
+            width: 53%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on54 {
+            width: 54%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on55 {
+            width: 55%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on56 {
+            width: 56%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on57 {
+            width: 57%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on58 {
+            width: 58%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on59 {
+            width: 59%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on60 {
+            width: 60%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on61 {
+            width: 61%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on62 {
+            width: 62%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on63 {
+            width: 63%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on64 {
+            width: 64%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on65 {
+            width: 65%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on66 {
+            width: 66%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on67 {
+            width: 67%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on68 {
+            width: 68%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on69 {
+            width: 69%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on70 {
+            width: 70%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on71 {
+            width: 71%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on72 {
+            width: 72%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on73 {
+            width: 73%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on74 {
+            width: 74%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on75 {
+            width: 75%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on76 {
+            width: 76%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on77 {
+            width: 77%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on78 {
+            width: 78%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on79 {
+            width: 79%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on80 {
+            width: 80%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on81 {
+            width: 81%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on82 {
+            width: 82%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on83 {
+            width: 83%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on84 {
+            width: 84%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on85 {
+            width: 85%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on86 {
+            width: 86%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on87 {
+            width: 87%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on88 {
+            width: 88%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on89 {
+            width: 89%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on90 {
+            width: 90%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on91 {
+            width: 91%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on92 {
+            width: 92%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on93 {
+            width: 93%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on94 {
+            width: 94%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on95 {
+            width: 95%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on96 {
+            width: 96%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on97 {
+            width: 97%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on98 {
+            width: 98%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on99 {
+            width: 99%
+        }
+
+        #wrap #versus .matchview ul li .graph .right .bar.on100 {
+            width: 100%
+        }
+
+#wrap #versus .summaryview {
+    margin-bottom: 20px;
+    background-color: #3a4259;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s all ease-in;
+    height: 0
+}
+
+    #wrap #versus .summaryview.on {
+        visibility: visible;
+        opacity: 1;
+        height: auto
+    }
+
+    #wrap #versus .summaryview .title {
+        padding: 10px
+    }
+
+        #wrap #versus .summaryview .title .desc {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.3)
+        }
+
+            #wrap #versus .summaryview .title .desc .sub {
+                font-size: 1rem;
+                opacity: 0.3;
+                margin-bottom: 10px
+            }
+
+    #wrap #versus .summaryview .sum {
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 1rem
+    }
+
+        #wrap #versus .summaryview .sum .desc {
+            color: rgba(255,255,255,0.5)
+        }
+
+            #wrap #versus .summaryview .sum .desc .total {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+                color: #fff
+            }
+
+            #wrap #versus .summaryview .sum .desc .all {
+                position: relative;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                background: rgba(0,0,0,0.5)
+            }
+
+                #wrap #versus .summaryview .sum .desc .all .win {
+                    display: block;
+                    height: 3px;
+                    background: #3975f9
+                }
+
+                #wrap #versus .summaryview .sum .desc .all .lose {
+                    display: block;
+                    height: 3px;
+                    background: #F62459
+                }
+
+                #wrap #versus .summaryview .sum .desc .all .win[data-percent='0'] {
+                    -webkit-animation: pro0 2s;
+                    animation: pro0 2s;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards
+                }
+
+                #wrap #versus .summaryview .sum .desc .all .lose[data-percent='0'] {
+                    -webkit-animation: pro0 2s;
+                    animation: pro0 2s;
+                    -webkit-animation-fill-mode: forwards;
+                    animation-fill-mode: forwards
+                }
+
+@keyframes pro0 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 0%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='1'] {
+    -webkit-animation: pro1 2s;
+    animation: pro1 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='1'] {
+    -webkit-animation: pro1 2s;
+    animation: pro1 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro1 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 1%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='2'] {
+    -webkit-animation: pro2 2s;
+    animation: pro2 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='2'] {
+    -webkit-animation: pro2 2s;
+    animation: pro2 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro2 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 2%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='3'] {
+    -webkit-animation: pro3 2s;
+    animation: pro3 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='3'] {
+    -webkit-animation: pro3 2s;
+    animation: pro3 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro3 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 3%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='4'] {
+    -webkit-animation: pro4 2s;
+    animation: pro4 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='4'] {
+    -webkit-animation: pro4 2s;
+    animation: pro4 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro4 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 4%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='5'] {
+    -webkit-animation: pro5 2s;
+    animation: pro5 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='5'] {
+    -webkit-animation: pro5 2s;
+    animation: pro5 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro5 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 5%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='6'] {
+    -webkit-animation: pro6 2s;
+    animation: pro6 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='6'] {
+    -webkit-animation: pro6 2s;
+    animation: pro6 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro6 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 6%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='7'] {
+    -webkit-animation: pro7 2s;
+    animation: pro7 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='7'] {
+    -webkit-animation: pro7 2s;
+    animation: pro7 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro7 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 7%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='8'] {
+    -webkit-animation: pro8 2s;
+    animation: pro8 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='8'] {
+    -webkit-animation: pro8 2s;
+    animation: pro8 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro8 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 8%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='9'] {
+    -webkit-animation: pro9 2s;
+    animation: pro9 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='9'] {
+    -webkit-animation: pro9 2s;
+    animation: pro9 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro9 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 9%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='10'] {
+    -webkit-animation: pro10 2s;
+    animation: pro10 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='10'] {
+    -webkit-animation: pro10 2s;
+    animation: pro10 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro10 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 10%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='11'] {
+    -webkit-animation: pro11 2s;
+    animation: pro11 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='11'] {
+    -webkit-animation: pro11 2s;
+    animation: pro11 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro11 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 11%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='12'] {
+    -webkit-animation: pro12 2s;
+    animation: pro12 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='12'] {
+    -webkit-animation: pro12 2s;
+    animation: pro12 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro12 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 12%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='13'] {
+    -webkit-animation: pro13 2s;
+    animation: pro13 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='13'] {
+    -webkit-animation: pro13 2s;
+    animation: pro13 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro13 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 13%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='14'] {
+    -webkit-animation: pro14 2s;
+    animation: pro14 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='14'] {
+    -webkit-animation: pro14 2s;
+    animation: pro14 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro14 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 14%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='15'] {
+    -webkit-animation: pro15 2s;
+    animation: pro15 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='15'] {
+    -webkit-animation: pro15 2s;
+    animation: pro15 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro15 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 15%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='16'] {
+    -webkit-animation: pro16 2s;
+    animation: pro16 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='16'] {
+    -webkit-animation: pro16 2s;
+    animation: pro16 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro16 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 16%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='17'] {
+    -webkit-animation: pro17 2s;
+    animation: pro17 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='17'] {
+    -webkit-animation: pro17 2s;
+    animation: pro17 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro17 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 17%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='18'] {
+    -webkit-animation: pro18 2s;
+    animation: pro18 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='18'] {
+    -webkit-animation: pro18 2s;
+    animation: pro18 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro18 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 18%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='19'] {
+    -webkit-animation: pro19 2s;
+    animation: pro19 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='19'] {
+    -webkit-animation: pro19 2s;
+    animation: pro19 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro19 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 19%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='20'] {
+    -webkit-animation: pro20 2s;
+    animation: pro20 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='20'] {
+    -webkit-animation: pro20 2s;
+    animation: pro20 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro20 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 20%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='21'] {
+    -webkit-animation: pro21 2s;
+    animation: pro21 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='21'] {
+    -webkit-animation: pro21 2s;
+    animation: pro21 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro21 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 21%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='22'] {
+    -webkit-animation: pro22 2s;
+    animation: pro22 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='22'] {
+    -webkit-animation: pro22 2s;
+    animation: pro22 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro22 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 22%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='23'] {
+    -webkit-animation: pro23 2s;
+    animation: pro23 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='23'] {
+    -webkit-animation: pro23 2s;
+    animation: pro23 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro23 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 23%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='24'] {
+    -webkit-animation: pro24 2s;
+    animation: pro24 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='24'] {
+    -webkit-animation: pro24 2s;
+    animation: pro24 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro24 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 24%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='25'] {
+    -webkit-animation: pro25 2s;
+    animation: pro25 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='25'] {
+    -webkit-animation: pro25 2s;
+    animation: pro25 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro25 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 25%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='26'] {
+    -webkit-animation: pro26 2s;
+    animation: pro26 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='26'] {
+    -webkit-animation: pro26 2s;
+    animation: pro26 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro26 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 26%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='27'] {
+    -webkit-animation: pro27 2s;
+    animation: pro27 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='27'] {
+    -webkit-animation: pro27 2s;
+    animation: pro27 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro27 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 27%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='28'] {
+    -webkit-animation: pro28 2s;
+    animation: pro28 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='28'] {
+    -webkit-animation: pro28 2s;
+    animation: pro28 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro28 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 28%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='29'] {
+    -webkit-animation: pro29 2s;
+    animation: pro29 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='29'] {
+    -webkit-animation: pro29 2s;
+    animation: pro29 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro29 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 29%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='30'] {
+    -webkit-animation: pro30 2s;
+    animation: pro30 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='30'] {
+    -webkit-animation: pro30 2s;
+    animation: pro30 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro30 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 30%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='31'] {
+    -webkit-animation: pro31 2s;
+    animation: pro31 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='31'] {
+    -webkit-animation: pro31 2s;
+    animation: pro31 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro31 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 31%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='32'] {
+    -webkit-animation: pro32 2s;
+    animation: pro32 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='32'] {
+    -webkit-animation: pro32 2s;
+    animation: pro32 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro32 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 32%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='33'] {
+    -webkit-animation: pro33 2s;
+    animation: pro33 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='33'] {
+    -webkit-animation: pro33 2s;
+    animation: pro33 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro33 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 33%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='34'] {
+    -webkit-animation: pro34 2s;
+    animation: pro34 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='34'] {
+    -webkit-animation: pro34 2s;
+    animation: pro34 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro34 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 34%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='35'] {
+    -webkit-animation: pro35 2s;
+    animation: pro35 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='35'] {
+    -webkit-animation: pro35 2s;
+    animation: pro35 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro35 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 35%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='36'] {
+    -webkit-animation: pro36 2s;
+    animation: pro36 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='36'] {
+    -webkit-animation: pro36 2s;
+    animation: pro36 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro36 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 36%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='37'] {
+    -webkit-animation: pro37 2s;
+    animation: pro37 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='37'] {
+    -webkit-animation: pro37 2s;
+    animation: pro37 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro37 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 37%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='38'] {
+    -webkit-animation: pro38 2s;
+    animation: pro38 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='38'] {
+    -webkit-animation: pro38 2s;
+    animation: pro38 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro38 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 38%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='39'] {
+    -webkit-animation: pro39 2s;
+    animation: pro39 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='39'] {
+    -webkit-animation: pro39 2s;
+    animation: pro39 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro39 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 39%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='40'] {
+    -webkit-animation: pro40 2s;
+    animation: pro40 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='40'] {
+    -webkit-animation: pro40 2s;
+    animation: pro40 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro40 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 40%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='41'] {
+    -webkit-animation: pro41 2s;
+    animation: pro41 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='41'] {
+    -webkit-animation: pro41 2s;
+    animation: pro41 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro41 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 41%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='42'] {
+    -webkit-animation: pro42 2s;
+    animation: pro42 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='42'] {
+    -webkit-animation: pro42 2s;
+    animation: pro42 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro42 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 42%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='43'] {
+    -webkit-animation: pro43 2s;
+    animation: pro43 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='43'] {
+    -webkit-animation: pro43 2s;
+    animation: pro43 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro43 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 43%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='44'] {
+    -webkit-animation: pro44 2s;
+    animation: pro44 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='44'] {
+    -webkit-animation: pro44 2s;
+    animation: pro44 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro44 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 44%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='45'] {
+    -webkit-animation: pro45 2s;
+    animation: pro45 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='45'] {
+    -webkit-animation: pro45 2s;
+    animation: pro45 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro45 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 45%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='46'] {
+    -webkit-animation: pro46 2s;
+    animation: pro46 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='46'] {
+    -webkit-animation: pro46 2s;
+    animation: pro46 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro46 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 46%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='47'] {
+    -webkit-animation: pro47 2s;
+    animation: pro47 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='47'] {
+    -webkit-animation: pro47 2s;
+    animation: pro47 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro47 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 47%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='48'] {
+    -webkit-animation: pro48 2s;
+    animation: pro48 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='48'] {
+    -webkit-animation: pro48 2s;
+    animation: pro48 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro48 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 48%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='49'] {
+    -webkit-animation: pro49 2s;
+    animation: pro49 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='49'] {
+    -webkit-animation: pro49 2s;
+    animation: pro49 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro49 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 49%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='50'] {
+    -webkit-animation: pro50 2s;
+    animation: pro50 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='50'] {
+    -webkit-animation: pro50 2s;
+    animation: pro50 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro50 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 50%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='51'] {
+    -webkit-animation: pro51 2s;
+    animation: pro51 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='51'] {
+    -webkit-animation: pro51 2s;
+    animation: pro51 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro51 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 51%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='52'] {
+    -webkit-animation: pro52 2s;
+    animation: pro52 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='52'] {
+    -webkit-animation: pro52 2s;
+    animation: pro52 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro52 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 52%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='53'] {
+    -webkit-animation: pro53 2s;
+    animation: pro53 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='53'] {
+    -webkit-animation: pro53 2s;
+    animation: pro53 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro53 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 53%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='54'] {
+    -webkit-animation: pro54 2s;
+    animation: pro54 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='54'] {
+    -webkit-animation: pro54 2s;
+    animation: pro54 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro54 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 54%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='55'] {
+    -webkit-animation: pro55 2s;
+    animation: pro55 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='55'] {
+    -webkit-animation: pro55 2s;
+    animation: pro55 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro55 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 55%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='56'] {
+    -webkit-animation: pro56 2s;
+    animation: pro56 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='56'] {
+    -webkit-animation: pro56 2s;
+    animation: pro56 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro56 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 56%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='57'] {
+    -webkit-animation: pro57 2s;
+    animation: pro57 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='57'] {
+    -webkit-animation: pro57 2s;
+    animation: pro57 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro57 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 57%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='58'] {
+    -webkit-animation: pro58 2s;
+    animation: pro58 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='58'] {
+    -webkit-animation: pro58 2s;
+    animation: pro58 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro58 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 58%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='59'] {
+    -webkit-animation: pro59 2s;
+    animation: pro59 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='59'] {
+    -webkit-animation: pro59 2s;
+    animation: pro59 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro59 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 59%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='60'] {
+    -webkit-animation: pro60 2s;
+    animation: pro60 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='60'] {
+    -webkit-animation: pro60 2s;
+    animation: pro60 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro60 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 60%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='61'] {
+    -webkit-animation: pro61 2s;
+    animation: pro61 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='61'] {
+    -webkit-animation: pro61 2s;
+    animation: pro61 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro61 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 61%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='62'] {
+    -webkit-animation: pro62 2s;
+    animation: pro62 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='62'] {
+    -webkit-animation: pro62 2s;
+    animation: pro62 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro62 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 62%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='63'] {
+    -webkit-animation: pro63 2s;
+    animation: pro63 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='63'] {
+    -webkit-animation: pro63 2s;
+    animation: pro63 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro63 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 63%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='64'] {
+    -webkit-animation: pro64 2s;
+    animation: pro64 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='64'] {
+    -webkit-animation: pro64 2s;
+    animation: pro64 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro64 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 64%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='65'] {
+    -webkit-animation: pro65 2s;
+    animation: pro65 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='65'] {
+    -webkit-animation: pro65 2s;
+    animation: pro65 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro65 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 65%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='66'] {
+    -webkit-animation: pro66 2s;
+    animation: pro66 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='66'] {
+    -webkit-animation: pro66 2s;
+    animation: pro66 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro66 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 66%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='67'] {
+    -webkit-animation: pro67 2s;
+    animation: pro67 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='67'] {
+    -webkit-animation: pro67 2s;
+    animation: pro67 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro67 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 67%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='68'] {
+    -webkit-animation: pro68 2s;
+    animation: pro68 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='68'] {
+    -webkit-animation: pro68 2s;
+    animation: pro68 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro68 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 68%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='69'] {
+    -webkit-animation: pro69 2s;
+    animation: pro69 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='69'] {
+    -webkit-animation: pro69 2s;
+    animation: pro69 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro69 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 69%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='70'] {
+    -webkit-animation: pro70 2s;
+    animation: pro70 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='70'] {
+    -webkit-animation: pro70 2s;
+    animation: pro70 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro70 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 70%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='71'] {
+    -webkit-animation: pro71 2s;
+    animation: pro71 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='71'] {
+    -webkit-animation: pro71 2s;
+    animation: pro71 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro71 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 71%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='72'] {
+    -webkit-animation: pro72 2s;
+    animation: pro72 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='72'] {
+    -webkit-animation: pro72 2s;
+    animation: pro72 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro72 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 72%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='73'] {
+    -webkit-animation: pro73 2s;
+    animation: pro73 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='73'] {
+    -webkit-animation: pro73 2s;
+    animation: pro73 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro73 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 73%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='74'] {
+    -webkit-animation: pro74 2s;
+    animation: pro74 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='74'] {
+    -webkit-animation: pro74 2s;
+    animation: pro74 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro74 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 74%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='75'] {
+    -webkit-animation: pro75 2s;
+    animation: pro75 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='75'] {
+    -webkit-animation: pro75 2s;
+    animation: pro75 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro75 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 75%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='76'] {
+    -webkit-animation: pro76 2s;
+    animation: pro76 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='76'] {
+    -webkit-animation: pro76 2s;
+    animation: pro76 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro76 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 76%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='77'] {
+    -webkit-animation: pro77 2s;
+    animation: pro77 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='77'] {
+    -webkit-animation: pro77 2s;
+    animation: pro77 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro77 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 77%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='78'] {
+    -webkit-animation: pro78 2s;
+    animation: pro78 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='78'] {
+    -webkit-animation: pro78 2s;
+    animation: pro78 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro78 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 78%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='79'] {
+    -webkit-animation: pro79 2s;
+    animation: pro79 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='79'] {
+    -webkit-animation: pro79 2s;
+    animation: pro79 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro79 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 79%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='80'] {
+    -webkit-animation: pro80 2s;
+    animation: pro80 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='80'] {
+    -webkit-animation: pro80 2s;
+    animation: pro80 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro80 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 80%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='81'] {
+    -webkit-animation: pro81 2s;
+    animation: pro81 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='81'] {
+    -webkit-animation: pro81 2s;
+    animation: pro81 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro81 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 81%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='82'] {
+    -webkit-animation: pro82 2s;
+    animation: pro82 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='82'] {
+    -webkit-animation: pro82 2s;
+    animation: pro82 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro82 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 82%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='83'] {
+    -webkit-animation: pro83 2s;
+    animation: pro83 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='83'] {
+    -webkit-animation: pro83 2s;
+    animation: pro83 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro83 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 83%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='84'] {
+    -webkit-animation: pro84 2s;
+    animation: pro84 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='84'] {
+    -webkit-animation: pro84 2s;
+    animation: pro84 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro84 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 84%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='85'] {
+    -webkit-animation: pro85 2s;
+    animation: pro85 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='85'] {
+    -webkit-animation: pro85 2s;
+    animation: pro85 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro85 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 85%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='86'] {
+    -webkit-animation: pro86 2s;
+    animation: pro86 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='86'] {
+    -webkit-animation: pro86 2s;
+    animation: pro86 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro86 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 86%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='87'] {
+    -webkit-animation: pro87 2s;
+    animation: pro87 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='87'] {
+    -webkit-animation: pro87 2s;
+    animation: pro87 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro87 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 87%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='88'] {
+    -webkit-animation: pro88 2s;
+    animation: pro88 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='88'] {
+    -webkit-animation: pro88 2s;
+    animation: pro88 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro88 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 88%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='89'] {
+    -webkit-animation: pro89 2s;
+    animation: pro89 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='89'] {
+    -webkit-animation: pro89 2s;
+    animation: pro89 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro89 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 89%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='90'] {
+    -webkit-animation: pro90 2s;
+    animation: pro90 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='90'] {
+    -webkit-animation: pro90 2s;
+    animation: pro90 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro90 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 90%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='91'] {
+    -webkit-animation: pro91 2s;
+    animation: pro91 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='91'] {
+    -webkit-animation: pro91 2s;
+    animation: pro91 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro91 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 91%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='92'] {
+    -webkit-animation: pro92 2s;
+    animation: pro92 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='92'] {
+    -webkit-animation: pro92 2s;
+    animation: pro92 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro92 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 92%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='93'] {
+    -webkit-animation: pro93 2s;
+    animation: pro93 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='93'] {
+    -webkit-animation: pro93 2s;
+    animation: pro93 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro93 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 93%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='94'] {
+    -webkit-animation: pro94 2s;
+    animation: pro94 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='94'] {
+    -webkit-animation: pro94 2s;
+    animation: pro94 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro94 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 94%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='95'] {
+    -webkit-animation: pro95 2s;
+    animation: pro95 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='95'] {
+    -webkit-animation: pro95 2s;
+    animation: pro95 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro95 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 95%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='96'] {
+    -webkit-animation: pro96 2s;
+    animation: pro96 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='96'] {
+    -webkit-animation: pro96 2s;
+    animation: pro96 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro96 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 96%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='97'] {
+    -webkit-animation: pro97 2s;
+    animation: pro97 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='97'] {
+    -webkit-animation: pro97 2s;
+    animation: pro97 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro97 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 97%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='98'] {
+    -webkit-animation: pro98 2s;
+    animation: pro98 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='98'] {
+    -webkit-animation: pro98 2s;
+    animation: pro98 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro98 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 98%
+    }
+}
+
+#wrap #versus .summaryview .sum .desc .all .win[data-percent='99'] {
+    -webkit-animation: pro99 2s;
+    animation: pro99 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+#wrap #versus .summaryview .sum .desc .all .lose[data-percent='99'] {
+    -webkit-animation: pro99 2s;
+    animation: pro99 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes pro99 {
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 99%
+    }
+}
+
+#wrap #versus .summaryview .result {
+    padding: 10px;
+    display: flex
+}
+
+    #wrap #versus .summaryview .result .desc {
+        flex: 1;
+        font-size: 1.4rem
+    }
+
+        #wrap #versus .summaryview .result .desc .adjective {
+            font-size: 1.2rem;
+            color: #03d387
+        }
+
+    #wrap #versus .summaryview .result .circle {
+        position: relative;
+        flex: 1
+    }
+
+        #wrap #versus .summaryview .result .circle .chart {
+            position: relative;
+            width: 200px;
+            height: 200px
+        }
+
+            #wrap #versus .summaryview .result .circle .chart .percent {
+                position: absolute;
+                display: inline-block;
+                width: 100px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center
+            }
+
+                #wrap #versus .summaryview .result .circle .chart .percent p {
+                    font-weight: 300;
+                    line-height: 4rem;
+                    font-size: 5rem
+                }
+
+                    #wrap #versus .summaryview .result .circle .chart .percent p span {
+                        font-size: 2rem;
+                        color: #70798b
+                    }
+
+                #wrap #versus .summaryview .result .circle .chart .percent .desc {
+                    display: inline-block;
+                    width: 100px;
+                    margin-top: -10px;
+                    font-size: 1.2rem;
+                    border-radius: 10px;
+                    background-color: #3975f9
+                }
+
+            #wrap #versus .summaryview .result .circle .chart figcaption {
+                padding: 50px 25px;
+                width: 100px;
+                height: 50px;
+                border: 20px solid rgba(0,0,0,0.3);
+                border-radius: 100px;
+                line-height: 50px;
+                text-align: center;
+                font-size: 5.5rem;
+                font-weight: 300;
+                -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+                -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3)
+            }
+
+            #wrap #versus .summaryview .result .circle .chart svg {
+                position: absolute;
+                top: 0;
+                left: 0
+            }
+
+                #wrap #versus .summaryview .result .circle .chart svg .outer {
+                    fill: transparent
+                }
+
+            #wrap #versus .summaryview .result .circle .chart[data-percent='100'] .outer {
+                stroke: #3975f9;
+                stroke-width: 20;
+                stroke-dasharray: 537;
+                stroke-dashoffset: 0;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                -webkit-animation: show100 2s;
+                animation: show100 2s
+            }
+
+@keyframes show100 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 0
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='99'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 5.34;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show99 2s;
+    animation: show99 2s
+}
+
+@keyframes show99 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 5.34
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='98'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 10.68;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show98 2s;
+    animation: show98 2s
+}
+
+@keyframes show98 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 10.68
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='97'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 16.02;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show97 2s;
+    animation: show97 2s
+}
+
+@keyframes show97 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 16.02
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='96'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 21.36;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show96 2s;
+    animation: show96 2s
+}
+
+@keyframes show96 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 21.36
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='95'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 26.7;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show95 2s;
+    animation: show95 2s
+}
+
+@keyframes show95 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 26.7
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='94'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 32.04;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show94 2s;
+    animation: show94 2s
+}
+
+@keyframes show94 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 32.04
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='93'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 37.38;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show93 2s;
+    animation: show93 2s
+}
+
+@keyframes show93 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 37.38
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='92'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 42.72;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show92 2s;
+    animation: show92 2s
+}
+
+@keyframes show92 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 42.72
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='91'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 48.06;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show91 2s;
+    animation: show91 2s
+}
+
+@keyframes show91 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 48.06
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='90'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 53.4;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show90 2s;
+    animation: show90 2s
+}
+
+@keyframes show90 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 53.4
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='89'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 58.74;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show89 2s;
+    animation: show89 2s
+}
+
+@keyframes show89 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 58.74
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='88'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 64.08;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show88 2s;
+    animation: show88 2s
+}
+
+@keyframes show88 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 64.08
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='87'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 69.42;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show87 2s;
+    animation: show87 2s
+}
+
+@keyframes show87 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 69.42
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='86'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 74.76;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show86 2s;
+    animation: show86 2s
+}
+
+@keyframes show86 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 74.76
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='85'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 80.1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show85 2s;
+    animation: show85 2s
+}
+
+@keyframes show85 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 80.1
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='84'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 85.44;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show84 2s;
+    animation: show84 2s
+}
+
+@keyframes show84 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 85.44
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='83'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 90.78;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show83 2s;
+    animation: show83 2s
+}
+
+@keyframes show83 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 90.78
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='82'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 96.12;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show82 2s;
+    animation: show82 2s
+}
+
+@keyframes show82 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 96.12
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='81'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 101.46;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show81 2s;
+    animation: show81 2s
+}
+
+@keyframes show81 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 101.46
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='80'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 106.8;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show80 2s;
+    animation: show80 2s
+}
+
+@keyframes show80 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 106.8
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='79'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 112.14;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show79 2s;
+    animation: show79 2s
+}
+
+@keyframes show79 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 112.14
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='78'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 117.48;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show78 2s;
+    animation: show78 2s
+}
+
+@keyframes show78 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 117.48
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='77'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 122.82;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show77 2s;
+    animation: show77 2s
+}
+
+@keyframes show77 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 122.82
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='76'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 128.16;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show76 2s;
+    animation: show76 2s
+}
+
+@keyframes show76 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 128.16
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='75'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 133.5;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show75 2s;
+    animation: show75 2s
+}
+
+@keyframes show75 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 133.5
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='74'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 138.84;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show74 2s;
+    animation: show74 2s
+}
+
+@keyframes show74 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 138.84
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='73'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 144.18;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show73 2s;
+    animation: show73 2s
+}
+
+@keyframes show73 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 144.18
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='72'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 149.52;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show72 2s;
+    animation: show72 2s
+}
+
+@keyframes show72 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 149.52
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='71'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 154.86;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show71 2s;
+    animation: show71 2s
+}
+
+@keyframes show71 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 154.86
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='70'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 160.2;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show70 2s;
+    animation: show70 2s
+}
+
+@keyframes show70 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 160.2
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='69'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 165.54;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show69 2s;
+    animation: show69 2s
+}
+
+@keyframes show69 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 165.54
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='68'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 170.88;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show68 2s;
+    animation: show68 2s
+}
+
+@keyframes show68 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 170.88
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='67'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 176.22;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show67 2s;
+    animation: show67 2s
+}
+
+@keyframes show67 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 176.22
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='66'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 181.56;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show66 2s;
+    animation: show66 2s
+}
+
+@keyframes show66 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 181.56
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='65'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 186.9;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show65 2s;
+    animation: show65 2s
+}
+
+@keyframes show65 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 186.9
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='64'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 192.24;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show64 2s;
+    animation: show64 2s
+}
+
+@keyframes show64 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 192.24
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='63'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 197.58;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show63 2s;
+    animation: show63 2s
+}
+
+@keyframes show63 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 197.58
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='62'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 202.92;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show62 2s;
+    animation: show62 2s
+}
+
+@keyframes show62 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 202.92
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='61'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 208.26;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show61 2s;
+    animation: show61 2s
+}
+
+@keyframes show61 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 208.26
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='60'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 213.6;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show60 2s;
+    animation: show60 2s
+}
+
+@keyframes show60 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 213.6
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='59'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 218.94;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show59 2s;
+    animation: show59 2s
+}
+
+@keyframes show59 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 218.94
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='58'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 224.28;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show58 2s;
+    animation: show58 2s
+}
+
+@keyframes show58 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 224.28
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='57'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 229.62;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show57 2s;
+    animation: show57 2s
+}
+
+@keyframes show57 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 229.62
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='56'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 234.96;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show56 2s;
+    animation: show56 2s
+}
+
+@keyframes show56 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 234.96
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='55'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 240.3;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show55 2s;
+    animation: show55 2s
+}
+
+@keyframes show55 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 240.3
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='54'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 245.64;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show54 2s;
+    animation: show54 2s
+}
+
+@keyframes show54 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 245.64
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='53'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 250.98;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show53 2s;
+    animation: show53 2s
+}
+
+@keyframes show53 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 250.98
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='52'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 256.32;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show52 2s;
+    animation: show52 2s
+}
+
+@keyframes show52 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 256.32
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='51'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 261.66;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show51 2s;
+    animation: show51 2s
+}
+
+@keyframes show51 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 261.66
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='50'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 267;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show50 2s;
+    animation: show50 2s
+}
+
+@keyframes show50 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 267
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='49'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 272.34;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show49 2s;
+    animation: show49 2s
+}
+
+@keyframes show49 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 272.34
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='48'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 277.68;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show48 2s;
+    animation: show48 2s
+}
+
+@keyframes show48 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 277.68
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='47'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 283.02;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show47 2s;
+    animation: show47 2s
+}
+
+@keyframes show47 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 283.02
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='46'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 288.36;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show46 2s;
+    animation: show46 2s
+}
+
+@keyframes show46 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 288.36
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='45'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 293.7;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show45 2s;
+    animation: show45 2s
+}
+
+@keyframes show45 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 293.7
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='44'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 299.04;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show44 2s;
+    animation: show44 2s
+}
+
+@keyframes show44 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 299.04
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='43'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 304.38;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show43 2s;
+    animation: show43 2s
+}
+
+@keyframes show43 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 304.38
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='42'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 309.72;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show42 2s;
+    animation: show42 2s
+}
+
+@keyframes show42 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 309.72
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='41'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 315.06;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show41 2s;
+    animation: show41 2s
+}
+
+@keyframes show41 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 315.06
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='40'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 320.4;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show40 2s;
+    animation: show40 2s
+}
+
+@keyframes show40 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 320.4
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='39'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 325.74;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show39 2s;
+    animation: show39 2s
+}
+
+@keyframes show39 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 325.74
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='38'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 331.08;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show38 2s;
+    animation: show38 2s
+}
+
+@keyframes show38 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 331.08
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='37'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 336.42;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show37 2s;
+    animation: show37 2s
+}
+
+@keyframes show37 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 336.42
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='36'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 341.76;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show36 2s;
+    animation: show36 2s
+}
+
+@keyframes show36 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 341.76
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='35'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 347.1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show35 2s;
+    animation: show35 2s
+}
+
+@keyframes show35 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 347.1
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='34'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 352.44;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show34 2s;
+    animation: show34 2s
+}
+
+@keyframes show34 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 352.44
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='33'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 357.78;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show33 2s;
+    animation: show33 2s
+}
+
+@keyframes show33 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 357.78
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='32'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 363.12;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show32 2s;
+    animation: show32 2s
+}
+
+@keyframes show32 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 363.12
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='31'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 368.46;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show31 2s;
+    animation: show31 2s
+}
+
+@keyframes show31 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 368.46
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='30'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 373.8;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show30 2s;
+    animation: show30 2s
+}
+
+@keyframes show30 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 373.8
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='29'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 379.14;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show29 2s;
+    animation: show29 2s
+}
+
+@keyframes show29 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 379.14
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='28'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 384.48;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show28 2s;
+    animation: show28 2s
+}
+
+@keyframes show28 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 384.48
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='27'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 389.82;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show27 2s;
+    animation: show27 2s
+}
+
+@keyframes show27 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 389.82
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='26'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 395.16;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show26 2s;
+    animation: show26 2s
+}
+
+@keyframes show26 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 395.16
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='25'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 400.5;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show25 2s;
+    animation: show25 2s
+}
+
+@keyframes show25 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 400.5
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='24'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 405.84;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show24 2s;
+    animation: show24 2s
+}
+
+@keyframes show24 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 405.84
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='23'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 411.18;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show23 2s;
+    animation: show23 2s
+}
+
+@keyframes show23 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 411.18
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='22'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 416.52;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show22 2s;
+    animation: show22 2s
+}
+
+@keyframes show22 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 416.52
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='21'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 421.86;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show21 2s;
+    animation: show21 2s
+}
+
+@keyframes show21 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 421.86
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='20'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 427.2;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show20 2s;
+    animation: show20 2s
+}
+
+@keyframes show20 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 427.2
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='19'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 432.54;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show19 2s;
+    animation: show19 2s
+}
+
+@keyframes show19 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 432.54
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='18'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 437.88;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show18 2s;
+    animation: show18 2s
+}
+
+@keyframes show18 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 437.88
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='17'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 443.22;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show17 2s;
+    animation: show17 2s
+}
+
+@keyframes show17 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 443.22
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='16'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 448.56;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show16 2s;
+    animation: show16 2s
+}
+
+@keyframes show16 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 448.56
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='15'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 453.9;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show15 2s;
+    animation: show15 2s
+}
+
+@keyframes show15 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 453.9
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='14'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 459.24;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show14 2s;
+    animation: show14 2s
+}
+
+@keyframes show14 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 459.24
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='13'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 464.58;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show13 2s;
+    animation: show13 2s
+}
+
+@keyframes show13 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 464.58
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='12'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 469.92;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show12 2s;
+    animation: show12 2s
+}
+
+@keyframes show12 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 469.92
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='11'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 475.26;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show11 2s;
+    animation: show11 2s
+}
+
+@keyframes show11 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 475.26
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='10'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 480.6;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show10 2s;
+    animation: show10 2s
+}
+
+@keyframes show10 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 480.6
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='9'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 485.94;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show9 2s;
+    animation: show9 2s
+}
+
+@keyframes show9 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 485.94
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='8'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 491.28;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show8 2s;
+    animation: show8 2s
+}
+
+@keyframes show8 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 491.28
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='7'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 496.62;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show7 2s;
+    animation: show7 2s
+}
+
+@keyframes show7 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 496.62
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='6'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 501.96;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show6 2s;
+    animation: show6 2s
+}
+
+@keyframes show6 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 501.96
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='5'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 507.3;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show5 2s;
+    animation: show5 2s
+}
+
+@keyframes show5 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 507.3
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='4'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 512.64;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show4 2s;
+    animation: show4 2s
+}
+
+@keyframes show4 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 512.64
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='3'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 517.98;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show3 2s;
+    animation: show3 2s
+}
+
+@keyframes show3 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 517.98
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='2'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 523.32;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show2 2s;
+    animation: show2 2s
+}
+
+@keyframes show2 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 523.32
+    }
+}
+
+#wrap #versus .summaryview .result .circle .chart[data-percent='1'] .outer {
+    stroke: #3975f9;
+    stroke-width: 20;
+    stroke-dasharray: 537;
+    stroke-dashoffset: 528.66;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: show1 2s;
+    animation: show1 2s
+}
+
+@keyframes show1 {
+    from {
+        stroke-dashoffset: 537
+    }
+
+    to {
+        stroke-dashoffset: 528.66
+    }
+}
+
+#wrap #versus .copyright {
+    padding-bottom: 20px;
+    color: rgba(255,255,255,0.3);
+    line-height: 13px;
+    height: 13px;
+    font-size: 13px;
+    text-align: center
+}
+
+    #wrap #versus .copyright img {
+        height: 13px;
+        vertical-align: top;
+        opacity: .3
+    }
+
+#wrap #popup {
+    position: fixed;
+    display: table;
+    visibility: hidden;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0,0,0,0.5);
+    transition: opacity .2s ease;
+    opacity: 0;
+    transition: .3s opacity ease-in
+}
+
+    #wrap #popup.on {
+        visibility: visible;
+        opacity: 1;
+        height: 100%
+    }
+
+    #wrap #popup #wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        color: #1f1f36
+    }
+
+        #wrap #popup #wrapper #alert {
+            position: relative;
+            width: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+            z-index: 20
+        }
+
+            #wrap #popup #wrapper #alert .top {
+                padding: 10px 28px;
+                font-size: 14px;
+                font-weight: 500;
+                background-color: #3975f9;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                color: #fff
+            }
+
+            #wrap #popup #wrapper #alert .body {
+                padding: 20px 28px;
+                font-size: 14px;
+                color: #fff;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background-color: #3a4259
+            }
+
+                #wrap #popup #wrapper #alert .body .buttons {
+                    margin-top: 14px;
+                    text-align: right
+                }
+
+                    #wrap #popup #wrapper #alert .body .buttons button {
+                        margin-left: 5px;
+                        width: 50px;
+                        height: 32px;
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: #fff;
+                        background-color: #3975f9;
+                        border: none;
+                        border-radius: 5px;
+                        -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+                        -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+                        box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3)
+                    }
+
+                        #wrap #popup #wrapper #alert .body .buttons button:active {
+                            background-color: #03d387;
+                            box-shadow: none
+                        }
+
+                        #wrap #popup #wrapper #alert .body .buttons button:hover {
+                            background-color: #03d387;
+                            box-shadow: none
+                        }
+
+        #wrap #popup #wrapper #kart {
+            position: relative;
+            width: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+            z-index: 20
+        }
+
+            #wrap #popup #wrapper #kart .top {
+                padding: 10px 28px;
+                font-size: 14px;
+                font-weight: 500;
+                background-color: #3975f9;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                color: #fff
+            }
+
+            #wrap #popup #wrapper #kart .body {
+                padding: 20px 28px;
+                color: #fff;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background-color: #3a4259
+            }
+
+                #wrap #popup #wrapper #kart .body .content {
+                    height: 70vh;
+                    overflow: hidden
+                }
+
+                    #wrap #popup #wrapper #kart .body .content .group .item .tiers {
+                        position: relative;
+                        height: 20px;
+                        line-height: 20px;
+                        padding-bottom: 5px;
+                        margin-bottom: 10px;
+                        border-bottom: 1px solid rgba(255,255,255,0.3)
+                    }
+
+                        #wrap #popup #wrapper #kart .body .content .group .item .tiers .text {
+                            margin-left: 25px;
+                            color: rgba(255,255,255,0.5)
+                        }
+
+                        #wrap #popup #wrapper #kart .body .content .group .item .tiers .tier {
+                            position: absolute;
+                            width: 20px;
+                            height: 20px;
+                            vertical-align: middle
+                        }
+
+                            #wrap #popup #wrapper #kart .body .content .group .item .tiers .tier.one {
+                                background: url(/img/tier_1.png) no-repeat 50%;
+                                background-size: contain
+                            }
+
+                            #wrap #popup #wrapper #kart .body .content .group .item .tiers .tier.two {
+                                background: url(/img/tier_2.png) no-repeat 50%;
+                                background-size: contain
+                            }
+
+                            #wrap #popup #wrapper #kart .body .content .group .item .tiers .tier.three {
+                                background: url(/img/tier_3.png) no-repeat 50%;
+                                background-size: contain
+                            }
+
+                            #wrap #popup #wrapper #kart .body .content .group .item .tiers .tier.four {
+                                background: url(/img/tier_4.png) no-repeat 50%;
+                                background-size: contain
+                            }
+
+                            #wrap #popup #wrapper #kart .body .content .group .item .tiers .tier.five {
+                                background: url(/img/tier_5.png) no-repeat 50%;
+                                background-size: contain
+                            }
+
+                    #wrap #popup #wrapper #kart .body .content .group .item ul {
+                        display: flex;
+                        flex-direction: row;
+                        -webkit-box-lines: multiple;
+                        -ms-flex-wrap: wrap;
+                        flex-wrap: wrap
+                    }
+
+                        #wrap #popup #wrapper #kart .body .content .group .item ul li {
+                            position: relative;
+                            flex: 1;
+                            max-width: 30%;
+                            min-width: 30%;
+                            text-align: center;
+                            margin-bottom: 5px;
+                            margin-right: 5px
+                        }
+
+                            #wrap #popup #wrapper #kart .body .content .group .item ul li img {
+                                width: 60px
+                            }
+
+                            #wrap #popup #wrapper #kart .body .content .group .item ul li .select {
+                                display: none;
+                                position: absolute;
+                                top: 0px;
+                                left: 0px;
+                                width: 20px;
+                                height: 20px;
+                                background: #03d387;
+                                border-radius: 10px;
+                                -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+                                -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+                                box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3)
+                            }
+
+                                #wrap #popup #wrapper #kart .body .content .group .item ul li .select:after {
+                                    content: '';
+                                    width: 9px;
+                                    height: 5px;
+                                    position: absolute;
+                                    top: 4px;
+                                    left: 4px;
+                                    border: 3px solid #fcfff4;
+                                    border-top: none;
+                                    border-right: none;
+                                    background: transparent;
+                                    -webkit-transform: rotate(-45deg);
+                                    transform: rotate(-45deg)
+                                }
+
+                            #wrap #popup #wrapper #kart .body .content .group .item ul li.on .select {
+                                display: block
+                            }
+
+                #wrap #popup #wrapper #kart .body .buttons {
+                    margin-top: 14px;
+                    text-align: right
+                }
+
+                    #wrap #popup #wrapper #kart .body .buttons button {
+                        margin-left: 5px;
+                        width: 50px;
+                        height: 32px;
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: #fff;
+                        background-color: #3975f9;
+                        border: none;
+                        border-radius: 5px;
+                        -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+                        -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+                        box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3)
+                    }
+
+                        #wrap #popup #wrapper #kart .body .buttons button:active {
+                            background-color: #03d387;
+                            box-shadow: none
+                        }
+
+                        #wrap #popup #wrapper #kart .body .buttons button:hover {
+                            background-color: #03d387;
+                            box-shadow: none
+                        }
+
+        #wrap #popup #wrapper #track {
+            position: relative;
+            width: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+            z-index: 20
+        }
+
+            #wrap #popup #wrapper #track .top {
+                padding: 10px 28px;
+                font-size: 14px;
+                font-weight: 500;
+                background-color: #3975f9;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                color: #fff
+            }
+
+            #wrap #popup #wrapper #track .body {
+                padding: 20px 28px;
+                color: #fff;
+                border-bottom-left-radius: 5px;
+                border-bottom-right-radius: 5px;
+                background-color: #3a4259
+            }
+
+                #wrap #popup #wrapper #track .body .random {
+                    display: flex;
+                    margin-top: 10px;
+                    margin-bottom: 10px
+                }
+
+                    #wrap #popup #wrapper #track .body .random div {
+                        position: relative;
+                        width: 100%;
+                        flex: 1;
+                        margin-left: 5px;
+                        text-align: center;
+                        cursor: pointer
+                    }
+
+                        #wrap #popup #wrapper #track .body .random div img {
+                            width: 100%
+                        }
+
+                        #wrap #popup #wrapper #track .body .random div .select {
+                            display: none;
+                            position: absolute;
+                            top: -5px;
+                            left: -8px;
+                            width: 20px;
+                            height: 20px;
+                            background: #03d387;
+                            border-radius: 10px;
+                            -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+                            -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+                            box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3)
+                        }
+
+                            #wrap #popup #wrapper #track .body .random div .select:after {
+                                content: '';
+                                width: 9px;
+                                height: 5px;
+                                position: absolute;
+                                top: 4px;
+                                left: 4px;
+                                border: 3px solid #fcfff4;
+                                border-top: none;
+                                border-right: none;
+                                background: transparent;
+                                -webkit-transform: rotate(-45deg);
+                                transform: rotate(-45deg)
+                            }
+
+                        #wrap #popup #wrapper #track .body .random div.on .select {
+                            display: block
+                        }
+
+                #wrap #popup #wrapper #track .body .content {
+                    height: 50vh;
+                    overflow: hidden
+                }
+
+                    #wrap #popup #wrapper #track .body .content .group .item .difficult {
+                        height: 20px;
+                        line-height: 20px;
+                        padding-bottom: 5px;
+                        margin-bottom: 10px;
+                        border-bottom: 1px solid rgba(255,255,255,0.3);
+                        color: rgba(255,255,255,0.5)
+                    }
+
+                    #wrap #popup #wrapper #track .body .content .group .item ul li {
+                        font-size: 1.2rem;
+                        margin-bottom: 5px;
+                        line-height: 20px;
+                        height: 20px
+                    }
+
+                        #wrap #popup #wrapper #track .body .content .group .item ul li span {
+                            vertical-align: top;
+                            margin-left: 5px
+                        }
+
+                        #wrap #popup #wrapper #track .body .content .group .item ul li input[type="checkbox"] {
+                            display: none
+                        }
+
+                            #wrap #popup #wrapper #track .body .content .group .item ul li input[type="checkbox"] + label {
+                                display: inline-block;
+                                width: 40px;
+                                height: 20px;
+                                position: relative;
+                                transition: 0.3s;
+                                box-sizing: border-box
+                            }
+
+                                #wrap #popup #wrapper #track .body .content .group .item ul li input[type="checkbox"] + label:after, #wrap #popup #wrapper #track .body .content .group .item ul li input[type="checkbox"] + label:before {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    left: 0px;
+                                    top: 0px;
+                                    width: 20px;
+                                    height: 20px;
+                                    transition: 0.3s;
+                                    cursor: pointer
+                                }
+
+                        #wrap #popup #wrapper #track .body .content .group .item ul li .flex:checked + label.green {
+                            background: #88f7ce
+                        }
+
+                            #wrap #popup #wrapper #track .body .content .group .item ul li .flex:checked + label.green:after {
+                                background: #03d387
+                            }
+
+                        #wrap #popup #wrapper #track .body .content .group .item ul li .flex:checked + label:active:after {
+                            left: calc(100% - 28px)
+                        }
+
+                        #wrap #popup #wrapper #track .body .content .group .item ul li .flex:checked + label:after {
+                            left: calc(100% - 18px)
+                        }
+
+                        #wrap #popup #wrapper #track .body .content .group .item ul li .flex + label {
+                            background: #ddd;
+                            border-radius: 20px
+                        }
+
+                            #wrap #popup #wrapper #track .body .content .group .item ul li .flex + label:active:after {
+                                width: 26px
+                            }
+
+                            #wrap #popup #wrapper #track .body .content .group .item ul li .flex + label:after {
+                                background: #fff;
+                                border-radius: 10px;
+                                width: 16px;
+                                height: 16px;
+                                top: 2px;
+                                left: 2px
+                            }
+
+                #wrap #popup #wrapper #track .body .buttons {
+                    margin-top: 14px;
+                    text-align: right
+                }
+
+                    #wrap #popup #wrapper #track .body .buttons button {
+                        margin-left: 5px;
+                        width: 50px;
+                        height: 32px;
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: #fff;
+                        background-color: #3975f9;
+                        border: none;
+                        border-radius: 5px;
+                        -webkit-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+                        -moz-box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3);
+                        box-shadow: 3px 3px 3px 0px rgba(0,0,0,0.3)
+                    }
+
+                        #wrap #popup #wrapper #track .body .buttons button:active {
+                            background-color: #03d387;
+                            box-shadow: none
+                        }
+
+                        #wrap #popup #wrapper #track .body .buttons button:hover {
+                            background-color: #03d387;
+                            box-shadow: none
+                        }
