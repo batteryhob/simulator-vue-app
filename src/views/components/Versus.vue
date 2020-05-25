@@ -3,16 +3,14 @@
         <div class="compareview">
             <div class="riders">
                 <div class="left">
-                    <div class="nick" id="rider">
-                        <!--세팅-->
-                    </div>
-                    <div class="thumbnail" id="riderImg">
-                        <!--세팅-->
-                    </div>
-                    <div class="factor">
-                        <div class="kart" onclick="simulator.showKartList(0);">
-                            <img id="riderKartImg" src="img/1160.png" alt="카트">
-                            <p id="riderKartName">백기사 X</p>
+                    <div class="left">
+                        <div class="nick" id="rider">배터리호<span class="license rookie"></span></div>
+                        <div class="thumbnail" id="riderImg"><img class="character" src="https://s3-ap-northeast-1.amazonaws.com/solution-userstats/metadata/character/8981d8bae78600bc36b29c93866e23e4be92c06e32ebe6c67dd0c76ed369165d.png" alt="캐릭터"></div>
+                        <div class="factor">
+                            <div class="kart" @click="showKartList(0)">
+                                <img id="riderKartImg" src="img/1160.png" alt="카트">
+                                <p id="riderKartName">백기사 X</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -39,7 +37,7 @@
                         <!--세팅-->
                     </div>
                     <div class="factor">
-                        <div class="kart" onclick="simulator.showKartList(1);">
+                        <div class="kart" @click="showKartList(1)">
                             <img id="targetKartImg" src="img/1160.png" alt="카트">
                             <p id="targetKartName">백기사 X</p>
                         </div>
@@ -59,7 +57,7 @@
                 <div class="conditions">
                     <span>컨디션</span>
                     <div class="sliderdiv">
-                        <div class="nick">@ViewBag.Rider</div>
+                        <div class="nick">배터리호</div>
                         <div class="drag">
                             <div id="slider1"></div>
                             <span id="slider1Value">100%</span>
@@ -78,14 +76,14 @@
 
                 <div class="maps">
                     <span>트랙</span>
-                    <span class="setup" onclick="simulator.showTrackList();">
+                    <span class="setup" @click="showTrackList();">
                         <i class="fas fa-cog"></i>
                         설정
                     </span>
                     <div class="gallerywrap">
                         <div class="gallery" id="wrapper">
                             <ul id="selectedTracks">
-                                <li onclick="simulator.showTrackList();">
+                                <li @click="showTrackList();">
                                     <div class="thumbnail">
                                         <span><i class="fas fa-plus"></i></span>
                                     </div>
@@ -97,7 +95,7 @@
                 </div>
 
                 <div id="btnRun" class="buttons">
-                    <button class="run" onclick="simulator.run()">
+                    <button class="run" @click="simulatorRun()">
                         Fight!
                     </button>
                 </div>
@@ -159,8 +157,7 @@
         </div>
 
         <div class="copyright">
-            Copyright(c) 2019. All rights reserved by
-            <img data-v-72b6acb4="" src="img/tmi_logo_default.svg" />
+            Copyright(c) 2020. All rights reserved by Jeon Jiho
         </div>
 
     </div>
@@ -171,6 +168,55 @@ export default {
   name: 'Versus',
   components: {
     
+  },
+  methods: {
+    showKartList: function (target) {
+
+        this.$parent.pKARTTARGET = target;
+
+        //알럿보이기
+        this.$parent.track = false
+        this.$parent.kart = true
+        this.$parent.alert = false
+        this.$parent.popup = true
+
+        // eslint-disable-next-line
+        let kartwrap = new IScroll('.kartwrap', {
+            mouseWheel: true,
+            scrollbars: false,
+            scrollX: false,
+            scrollY: true,
+            click: true,
+            preventDefaultException: { tagName: /.*/ }
+        });
+
+        document.addEventListener('click', this._preventDefault, { passive: false });
+
+    },
+    showTrackList: function () {
+
+        //알럿보이기
+        this.$parent.track = true
+        this.$parent.kart = false
+        this.$parent.alert = false
+        this.$parent.popup = true
+
+        // eslint-disable-next-line
+        let trackWrap = new IScroll('.trackwrap', {
+            mouseWheel: true,
+            scrollbars: false,
+            scrollX: false,
+            scrollY: true,
+            click: false,
+            preventDefaultException: { tagName: /.*/ }
+        });
+
+    },
+    simulatorRun: function () {
+        
+        this.$parent.run();
+
+    },
   }
 }
 </script>
