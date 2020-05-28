@@ -4,8 +4,13 @@
             <div class="riders">
                 <div class="left">
                     <div class="left">
-                        <div class="nick" id="rider">배터리호<span class="license rookie"></span></div>
-                        <div class="thumbnail" id="riderImg"><img class="character" src="https://s3-ap-northeast-1.amazonaws.com/solution-userstats/metadata/character/8981d8bae78600bc36b29c93866e23e4be92c06e32ebe6c67dd0c76ed369165d.png" alt="캐릭터"></div>
+                        <div class="nick" id="rider">
+                            배터리호
+                            <span class="license rookie"></span>
+                        </div>
+                        <div class="thumbnail" id="riderImg">
+                            <img class="character" src="https://s3-ap-northeast-1.amazonaws.com/solution-userstats/metadata/character/8981d8bae78600bc36b29c93866e23e4be92c06e32ebe6c67dd0c76ed369165d.png" alt="캐릭터">
+                        </div>
                         <div class="factor">
                             <div class="kart" @click="showKartList(0)">
                                 <img id="riderKartImg" src="img/1160.png" alt="카트">
@@ -21,20 +26,13 @@
                         </p>
                     </div>
                 </div>
-                <div class="right" id="none">
-                    <div class="search">
+                <div class="right" id="find">
+                    <div class="nick" id="rider">
+                        배터리호
+                        <span class="license rookie"></span>
                     </div>
-                    <div class="thumbnail">
-                        <img class="character" src="img/null_target.png" alt="">
-                    </div>
-                    <p class="notarget">매칭 상대가 없습니다</p>
-                </div>
-                <div class="right" id="find" style="display:none">
-                    <div class="nick" id="target">
-                        <!--세팅-->
-                    </div>
-                    <div class="thumbnail" id="targetImg">
-                        <!--세팅-->
+                    <div class="thumbnail" id="riderImg">
+                        <img class="character" src="https://s3-ap-northeast-1.amazonaws.com/solution-userstats/metadata/character/8981d8bae78600bc36b29c93866e23e4be92c06e32ebe6c67dd0c76ed369165d.png" alt="캐릭터">
                     </div>
                     <div class="factor">
                         <div class="kart" @click="showKartList(1)">
@@ -64,9 +62,7 @@
                         </div>
                     </div>
                     <div class="sliderdiv">
-                        <div class="nick" id="slidertarget">
-                            <span style="color: rgba(255,255,255,0.3);">매칭 상대가 없습니다</span>
-                        </div>
+                        <div class="nick">배터리호</div>
                         <div class="drag">
                             <div id="slider2"></div>
                             <span id="slider2Value">100%</span>
@@ -169,6 +165,9 @@ export default {
   components: {
     
   },
+  mounted() {
+
+  },
   methods: {
     showKartList: function (target) {
 
@@ -181,16 +180,16 @@ export default {
         this.$parent.popup = true
 
         // eslint-disable-next-line
-        let kartwrap = new IScroll('.kartwrap', {
-            mouseWheel: true,
-            scrollbars: false,
-            scrollX: false,
-            scrollY: true,
-            click: true,
-            preventDefaultException: { tagName: /.*/ }
-        });
+        // let kartwrap = new IScroll('.kartwrap', {
+        //     mouseWheel: true,
+        //     scrollbars: false,
+        //     scrollX: false,
+        //     scrollY: true,
+        //     click: true,
+        //     preventDefaultException: { tagName: /.*/ }
+        // });
 
-        document.addEventListener('click', this._preventDefault, { passive: false });
+        // document.addEventListener('click', this._preventDefault, { passive: false });
 
     },
     showTrackList: function () {
@@ -202,14 +201,16 @@ export default {
         this.$parent.popup = true
 
         // eslint-disable-next-line
-        let trackWrap = new IScroll('.trackwrap', {
-            mouseWheel: true,
-            scrollbars: false,
-            scrollX: false,
-            scrollY: true,
-            click: false,
-            preventDefaultException: { tagName: /.*/ }
-        });
+        // let trackWrap = new IScroll('.trackwrap', {
+        //     mouseWheel: true,
+        //     scrollbars: false,
+        //     scrollX: false,
+        //     scrollY: true,
+        //     click: false,
+        //     preventDefaultException: { tagName: /.*/ }
+        // });
+
+        // document.addEventListener('click', this._preventDefault, { passive: false });
 
     },
     simulatorRun: function () {

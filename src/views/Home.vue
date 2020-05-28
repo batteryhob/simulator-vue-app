@@ -38,246 +38,6 @@ export default {
         $("#alert").show();
         $("#popup").addClass("on");
     },
-    // searchRider: function () {
-
-    //     var keyword = $("#keyword").val().trim();
-
-    //     //유효성검사
-    //     if (keyword == "") {
-    //         this.showAlert("라이더명을 입력해주세요.");
-    //         return;
-    //     }
-
-    //     var _self = this;
-
-    //     $.ajax({
-    //         type: "GET",
-    //         url: "/proxy/UserProfile?keyword=" + encodeURIComponent(keyword),
-    //         beforeSend: function (xhr) {
-    //             xhr.setRequestHeader("APIKey", "ZG9uJ3QgYWNjZXNzIHBsZWFzZQ==");
-    //             xhr.setRequestHeader("Authorization", "Bearer " + _TOKEN);
-    //         },
-    //         dataType: "json",
-    //         error: function () {
-    //             console.log('error');
-    //         },
-    //         success: function (res) {
-
-    //             if (!res.result || res.data == '') {
-    //                 _TARGET = "";
-
-    //                 _TARTGETKART = 1160;
-    //                 $("#targetKartImg").attr("src", getKartImg(1160));
-    //                 $("#targetKartName").html("백기사 X");
-
-    //                 $("#none").show();
-    //                 $("#find").hide();
-    //                 $("#slidertarget").empty().append("<span style=\"color: rgba(255, 255, 255, 0.3);\">매칭 상대가 없습니다</span>");
-    //                 _self.showAlert("검색된 라이더가 없습니다.");
-    //                 $("#keyword").val("");
-    //                 return
-    //             }
-    //             else {
-                    
-    //                 if (res.data.matches < 1) {
-    //                     _TARGET = "";
-
-    //                     _TARTGETKART = 1160;
-    //                     $("#targetKartImg").attr("src", getKartImg(1160));
-    //                     $("#targetKartName").html("백기사 X");
-
-    //                     $("#none").show();
-    //                     $("#find").hide();
-    //                     $("#slidertarget").empty().append("<span style=\"color: rgba(255, 255, 255, 0.3);\">매칭 상대가 없습니다</span>");
-    //                     _self.showAlert("라이더의 플레이기록이 없습니다.");
-    //                     $("#keyword").val("");                                    
-    //                     return
-    //                 }
-                    
-    //                 var nick = keyword;
-    //                 var chano = getCharacterImg(res.data.matches[0].matches[0].player.character);
-    //                 var li = getLicense(res.data.matches[0].matches[0].player.rankinggrade2);
-
-    //                 _TARGET = nick;
-
-    //                 _TARTGETKART = 1160;
-    //                 $("#targetKartImg").attr("src", getKartImg(1160));
-    //                 $("#targetKartName").html("백기사 X");
-
-    //                 $("#slidertarget").empty().append(nick);
-    //                 $("#target").empty().append("" + nick + "<span class=\"license " + li + "\"></span>");
-    //                 $("#targetImg").empty().append("<img class=\"character\" src=\"" + chano + "\" alt=\"캐릭터\">");
-    //                 $("#none").hide();
-    //                 $("#find").show();
-
-    //             }
-    //         }
-    //     });
-    // },
-    // setKart: function (kart, KartName, hash) {
-
-    //     if (_KARTTARGET == 0) {
-    //         _RIDERKART = kart;
-    //         $("#riderKartImg").attr("src", getKartImg(hash));
-    //         $("#riderKartName").html(KartName);
-    //     }                        
-    //     if (_KARTTARGET == 1) {
-    //         _TARTGETKART = kart;
-    //         $("#targetKartImg").attr("src", getKartImg(hash));
-    //         $("#targetKartName").html(KartName);
-    //     }               
-
-    // },
-    // setTrack: function (trackidhash, TrackName, hash) {
-
-    //     var obj = {
-    //         trackidhash: trackidhash,
-    //         TrackName: TrackName,
-    //         hash: hash
-    //     }
-
-    //     var added = true;
-    //     var duplicate = -1;
-    //     $.map(_SELECTEDTRACKS, function (el, index) {
-    //         if (el.trackidhash == obj.trackidhash) {
-    //             added = false;
-    //             duplicate = index;
-    //         }
-    //     });
-
-    //     if (added) {
-    //         _SELECTEDTRACKS.push(obj);
-    //     }else{
-    //         _SELECTEDTRACKS.splice(duplicate, 1);
-    //     }
-
-    //     var tracks = "";
-    //     $.each(_SELECTEDTRACKS, function (idx, el) {
-    //         tracks += "<li>\
-    //                         <div class=\"thumbnail\">\
-    //                             <img src=\"" + getTrackImg(el.hash) + "\" />\
-    //                         </div>\
-    //                         <span>" + el.TrackName.substring(0, 10) + "</span>\
-    //                     </li>"
-    //     });
-    //     tracks += "<li onclick=\"simulator.showTrackList();\">\
-    //                     <div class=\"thumbnail\">\
-    //                         <span><i class=\"fas fa-plus\"></i></span>\
-    //                     </div>\
-    //                     <span>트랙 추가</span>\
-    //                 </li>"
-
-    //     $("#selectedTracks").empty().append(tracks);
-
-    //     var configWrap = new IScroll('.gallerywrap', {
-    //         mouseWheel: false,
-    //         scrollbars: false,
-    //         scrollX: true,
-    //         scrollY: false,
-    //         click: true,
-    //         preventDefaultException: { tagName: /.*/ }
-    //     });
-
-    // },
-    // setRandom: function (type) {
-
-    //     //모두취소                    
-    //     $(".trackwrap input[type=checkbox]").prop("checked", false);
-    //     _SELECTEDTRACKS = [];
-
-    //     //같은 랜덤을 한번 더 찍었을 시
-    //     if (_RANDOMTYPE == type) {
-    //         _RANDOMTYPE = "";
-    //         var tracks = "";
-    //         tracks += "<li onclick=\"simulator.showTrackList();\">\
-    //                     <div class=\"thumbnail\">\
-    //                         <span><i class=\"fas fa-plus\"></i></span>\
-    //                     </div>\
-    //                     <span>트랙 추가</span>\
-    //                 </li>";
-    //         $("#selectedTracks").empty().append(tracks);
-    //         return;
-    //     }
-
-    //     _RANDOMTYPE = type;
-    //     var randomArrary = _RANDOMTRACKS.filter(function (x) {
-    //         return x.type == type;
-    //     });
-
-    //     for (var i = 0; i < randomArrary.length; i++) {
-    //         $("#track_" + randomArrary[i].trackidhash + "").trigger("click");
-    //     }
-
-    // },
-    // setCondition: function (condition, target) {
-
-    //     if (target == 0)
-    //         _RIDERCONDITION = condition;
-    //     if (target == 1)
-    //         _TARTGETCONDITION = condition;
-
-    // },
-    // run: function () {
-
-    //     //유효성검사
-    //     if (_RIDER == "") {
-    //         this.showAlert("매칭 라이더가 없습니다.");
-    //         return;
-    //     }
-
-    //     if (_TARGET == "") {
-    //         this.showAlert("매칭 상대가 없습니다.");
-    //         return;
-    //     }
-
-    //     if (_SELECTEDTRACKS.length < 1) {
-    //         this.showAlert("시뮬레이션을 할 트랙을 선택해주세요.");
-    //         return;
-    //     }
-
-    //     var _TRACKSPARAMS = [];
-    //     $.each(_SELECTEDTRACKS, function (idx, el) {
-    //         _TRACKSPARAMS.push(el.trackidhash);
-    //     });
-
-    //     var _self = this;
-
-    //     $("#btnRun").hide();
-    //     $(".cs-loader").show();
-    //     $(".matchview").removeClass("on");
-    //     $(".summaryview").removeClass("on");
-
-    //     $.ajax({
-    //         type: "POST",
-    //         url: "/Proxy/simulator",
-    //         dataType: 'json',
-    //         data: {
-    //             user1: _RIDER,
-    //             user2: _TARGET,
-    //             track_list: _TRACKSPARAMS,
-    //             user1_kart: _RIDERKART,
-    //             user1_condtn: _RIDERCONDITION,
-    //             user2_kart: _TARTGETKART,
-    //             user2_condtn: _TARTGETCONDITION
-    //         },
-    //         success: function (res) {
-
-    //             if (res.result) {
-    //                 //시뮬레이션 결과 세팅
-    //                 var obj = JSON.parse(res.responseString);
-    //                 _self.setResult(obj.body.games);
-    //             }
-
-    //         },
-    //         error: function (err) {
-
-    //             console.log(err);
-    //             $("#btnRun").show();
-    //             $(".cs-loader").hide();
-
-    //         },
-    //     });
-    // },
     // setResult: function (games) {                   
 
     //     var resultList = [];
@@ -422,29 +182,22 @@ export default {
     // }
   },
   data() {
-    return {
-      // _TOKEN : getToken,
-      // _RIDER : getRider,
-      pTARGET : '',
-                  
-      pRIDERKART : 1160,
-      pRIDERCONDITION : 100,
-      pTARTGETKART : 1160,
-      pTARTGETCONDITION : 100,
+      return {
 
-      pKARTTARGET : 0,
+        pRIDERKART : 1160,
+        pRIDERCONDITION : 100,
+        pTARTGETKART : 1160,
+        pTARTGETCONDITION : 100,
 
-      pSELECTEDTRACKS : [],
+        pKARTTARGET : 0,
+        pSELECTEDTRACKS : [],
 
-      pRANDOMTRACKS : [],
-      pRANDOMTYPE : "",
+        track: false,
+        kart: false,
+        alert: false,
+        popup: false
 
-      track: false,
-      kart: false,
-      alert: false,
-      popup: false
-
-    }
+      }
   }
 }
 </script>

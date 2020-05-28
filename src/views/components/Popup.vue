@@ -1,7 +1,7 @@
 <template>
     <div id="popup" v-bind:class="{ on: popup }">
         <div id="wrapper">
-            <div id="alert" v-show="alert">
+            <div id="alert" v-if="alert">
                 <div class="top">알림</div>
                 <div class="body">
                     <div class="content" id="message">
@@ -12,7 +12,7 @@
                     </div>
                 </div>
             </div>
-            <div id="kart" v-show="kart">
+            <div id="kart" v-if="kart">
                 <div class="top">카트선택</div>
                 <div class="body">
                     <div class="content kartwrap">
@@ -23,7 +23,7 @@
                                     <span class="text">티어 1</span>
                                 </div>
                                 <ul id="1tier">
-                                    <li v-for="(el, idx) in p1TIER" :key="idx" >
+                                    <li v-for="(el, idx) in p1TIER" :key="idx" @click="setKart(el.kart, el.KartName, el.hash)" >
                                         <img :src="getKartImg(el.hash)">
                                         <p>{{ el.KartName }}</p>
                                         <div class="select"></div>
@@ -36,7 +36,7 @@
                                     <span class="text">티어 2</span>
                                 </div>
                                 <ul id="2tier">
-                                    <li v-for="(el, idx) in p2TIER" :key="idx" >
+                                    <li v-for="(el, idx) in p2TIER" :key="idx" @click="setKart(el.kart, el.KartName, el.hash)" >
                                         <img :src="getKartImg(el.hash)">
                                         <p>{{ el.KartName }}</p>
                                         <div class="select"></div>
@@ -49,7 +49,7 @@
                                     <span class="text">티어 3</span>
                                 </div>
                                 <ul id="3tier">
-                                    <li v-for="(el, idx) in p3TIER" :key="idx" >
+                                    <li v-for="(el, idx) in p3TIER" :key="idx" @click="setKart(el.kart, el.KartName, el.hash)" >
                                         <img :src="getKartImg(el.hash)">
                                         <p>{{ el.KartName }}</p>
                                         <div class="select"></div>
@@ -62,7 +62,7 @@
                                     <span class="text">티어 4</span>
                                 </div>
                                 <ul id="4tier">
-                                    <li v-for="(el, idx) in p4TIER" :key="idx" >
+                                    <li v-for="(el, idx) in p4TIER" :key="idx" @click="setKart(el.kart, el.KartName, el.hash)" >
                                         <img :src="getKartImg(el.hash)">
                                         <p>{{ el.KartName }}</p>
                                         <div class="select"></div>
@@ -75,7 +75,7 @@
                                     <span class="text">티어 5</span>
                                 </div>
                                 <ul id="5tier">
-                                    <li v-for="(el, idx) in p5TIER" :key="idx" >
+                                    <li v-for="(el, idx) in p5TIER" :key="idx" @click="setKart(el.kart, el.KartName, el.hash)" >
                                         <img :src="getKartImg(el.hash)">
                                         <p>{{ el.KartName }}</p>
                                         <div class="select"></div>
@@ -89,29 +89,9 @@
                     </div>
                 </div>
             </div>
-            <div id="track" v-show="track">
+            <div id="track" v-if="track">
                 <div class="top">트랙선택</div>
                 <div class="body">
-                    <div class="random">
-                        <div onclick="simulator.setRandom('tmi')">
-                            <img src="img/allRandomThumb1zz.png" alt="TMI랜덤" />
-                            <p>TMI랜덤</p>
-                            <div class="select">
-                            </div>
-                        </div>
-                        <div onclick="simulator.setRandom('league')">
-                            <img src="img/leagueRandomThumb1zz.png" alt="리그랜덤" />
-                            <p>리그랜덤</p>
-                            <div class="select">
-                            </div>
-                        </div>
-                        <div onclick="simulator.setRandom('normal')">
-                            <img src="img/hot3RandomThumb1zz.png" alt="노말랜덤" />
-                            <p>노말랜덤</p>
-                            <div class="select">
-                            </div>
-                        </div>
-                    </div>
                     <div class="content trackwrap">
                         <ul class="group">
                             <li class="item">
@@ -120,7 +100,7 @@
                                 </div>
                                 <ul id="5diff">
                                     <li v-for="(el, idx) in p5DIFF" :key="idx" class="row" >
-                                        <input type ="checkbox" :id ="'track_' + el.trackidhash" class="flex" onclick="">
+                                        <input type ="checkbox" :id ="'track_' + el.trackidhash" class="flex" @click="setTrack(el.trackidhash, el.TrackName, el.hash)">
                                         <label :for="'track_' + el.trackidhash" class="green"></label>
                                         <span>{{ el.TrackName }}</span>
                                     </li>
@@ -132,7 +112,7 @@
                                 </div>
                                 <ul id="4diff">
                                     <li v-for="(el, idx) in p4DIFF" :key="idx" class="row" >
-                                        <input type ="checkbox" :id ="'track_' + el.trackidhash" class="flex" onclick="">
+                                        <input type ="checkbox" :id ="'track_' + el.trackidhash" class="flex" @click="setTrack(el.trackidhash, el.TrackName, el.hash)">
                                         <label :for="'track_' + el.trackidhash" class="green"></label>
                                         <span>{{ el.TrackName }}</span>
                                     </li>
@@ -144,7 +124,7 @@
                                 </div>
                                 <ul id="3diff">
                                     <li v-for="(el, idx) in p3DIFF" :key="idx" class="row" >
-                                        <input type ="checkbox" :id ="'track_' + el.trackidhash" class="flex" onclick="">
+                                        <input type ="checkbox" :id ="'track_' + el.trackidhash" class="flex" @click="setTrack(el.trackidhash, el.TrackName, el.hash)">
                                         <label :for="'track_' + el.trackidhash" class="green"></label>
                                         <span>{{ el.TrackName }}</span>
                                     </li>
@@ -156,7 +136,7 @@
                                 </div>
                                 <ul id="2diff">
                                     <li v-for="(el, idx) in p2DIFF" :key="idx" class="row" >
-                                        <input type ="checkbox" :id ="'track_' + el.trackidhash" class="flex" onclick="">
+                                        <input type ="checkbox" :id ="'track_' + el.trackidhash" class="flex" @click="setTrack(el.trackidhash, el.TrackName, el.hash)">
                                         <label :for="'track_' + el.trackidhash" class="green"></label>
                                         <span>{{ el.TrackName }}</span>
                                     </li>
@@ -194,8 +174,45 @@ export default {
 
   },
   mounted() {
-      this.getKartList();
-      this.getTrackList();
+
+    var slider1 = document.getElementById('slider1');
+    var slider2 = document.getElementById('slider2');
+    
+    window.noUiSlider.create(slider1, {
+        start: [100],
+        behaviour: 'tap',
+        connect: [true, false],
+        range: {
+            'min': [0],
+            'max': [100]
+        },
+        step: 1
+    });
+
+    window.noUiSlider.create(slider2, {
+        start: [100],
+        behaviour: 'tap',
+        connect: [true, false],
+        range: {
+            'min': [0],
+            'max': [100]
+        },
+        step: 1
+    });
+
+    slider1.noUiSlider.on('update', ()=>{
+        $("#slider1Value").empty().append(slider1.noUiSlider.get().replace(".00", "") + "%");
+        this.setCondition(slider1.noUiSlider.get().replace(".00", ""), 0);
+    });
+
+    slider2.noUiSlider.on('update', ()=>{
+        $("#slider2Value").empty().append(slider2.noUiSlider.get().replace(".00", "") + "%");
+        this.setCondition(slider2.noUiSlider.get().replace(".00", ""), 1);
+    });    
+
+    this.getKartList();
+    this.getTrackList();
+    
   },
   methods: {
     closePopup: function () {
@@ -226,7 +243,6 @@ export default {
 
     },
     getKartList: function () {
-
         if (kartlist.result) {
 
             for (var i = 0; i < kartlist.data.length; i++) {
@@ -303,27 +319,18 @@ export default {
                         if (added) {
                             this.$data.p5TIER.push(kart)
                         }
-
                     }
                 }
             }
 
-            this.setKartList();
+            $(".kartwrap .item ul > li").on("click", function (e) {
+                $(".kartwrap .item ul > li").removeClass("on")
+                $(e.currentTarget).addClass("on");
+            });
+        
         }
-
-    },
-    setKartList: function () {
-
-        $(".kartwrap .item ul > li").on("click", function (e) {
-            $(".kartwrap .item ul > li").removeClass("on")
-            $(e.currentTarget).addClass("on");
-        });
-
     },
     getTrackList: function () {
-
-        //_RANDOMTRACKS = tracklist.datas;
-
         for (var i = 0; i < tracklist.datas.length; i++) {
             var track = tracklist.datas[i];
 
@@ -385,10 +392,86 @@ export default {
             
         }
 
-    }
+    },
+    setKart: function (kart, KartName, hash) {
+
+        if (this.$parent.pKARTTARGET == 0) {
+            this.$parent.pRIDERKART = kart;
+            $("#riderKartImg").attr("src", this.getKartImg(hash));
+            $("#riderKartName").html(KartName);
+        }                        
+        if (this.$parent.pKARTTARGET == 1) {
+            this.$parent.pTARTGETKART = kart;
+            $("#targetKartImg").attr("src", this.getKartImg(hash));
+            $("#targetKartName").html(KartName);
+        }               
+
+    },
+    setTrack: function (trackidhash, TrackName, hash) {
+
+        let obj = {
+            trackidhash: trackidhash,
+            TrackName: TrackName,
+            hash: hash
+        }
+
+        let added = true;
+        let duplicate = -1;
+        $.map(this.$parent.pSELECTEDTRACKS, function (el, index) {
+            if (el.trackidhash == obj.trackidhash) {
+                added = false;
+                duplicate = index;
+            }
+        });
+
+        if (added) {
+            this.$parent.pSELECTEDTRACKS.push(obj);
+        }else{
+            this.$parent.pSELECTEDTRACKS.splice(duplicate, 1);
+        }
+
+        
+
+        let tracks = "";
+        $.each(this.$parent.pSELECTEDTRACKS, (idx, el)=>{
+            tracks += "<li>\
+                            <div class=\"thumbnail\">\
+                                <img src=\"" + this.getTrackImg(el.hash) + "\" />\
+                            </div>\
+                            <span>" + el.TrackName.substring(0, 10) + "</span>\
+                        </li>"
+        });
+        tracks += "<li onclick=\"simulator.showTrackList();\">\
+                        <div class=\"thumbnail\">\
+                            <span><i class=\"fas fa-plus\"></i></span>\
+                        </div>\
+                        <span>트랙 추가</span>\
+                    </li>"
+        $("#selectedTracks").empty().append(tracks);
+
+        //eslint-disable-next-line
+        // let configWrap = new IScroll('.gallerywrap', {
+        //     mouseWheel: false,
+        //     scrollbars: false,
+        //     scrollX: true,
+        //     scrollY: false,
+        //     click: true,
+        //     preventDefaultException: { tagName: /.*/ }
+        // });
+
+    },
+    setCondition: function (condition, target) {
+        
+        if (target == 0)
+            this.$parent.pRIDERCONDITION = condition;
+        if (target == 1)
+            this.$parent.pTARTGETCONDITION = condition;
+
+    },
   },
   data() {
       return {
+
         p1TIER : [],
         p2TIER : [],
         p3TIER : [],
@@ -400,6 +483,7 @@ export default {
         p3DIFF : [],
         p2DIFF : [],
         p1DIFF : []
+
       }
   }
 }

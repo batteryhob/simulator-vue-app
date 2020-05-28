@@ -4,8 +4,8 @@
             <img src="img/tmi_logo_default.svg">
         </div>
         <div class="search">
-            <input id="keyword" type="text" value="" placeholder="매칭 상대의 라이더명을 입력하세요" onkeydown="simulator.checkKey(event);" maxlength="100">
-            <i class="fas fa-search" onclick="simulator.searchRider();"></i>
+            <input id="keyword" type="text" value="" placeholder="샘플에서는 사용할 수 없습니다." maxlength="100">
+            <i class="fas fa-search" @click="searchRider();"></i>
         </div>
     </div>
 </template>
@@ -15,6 +15,11 @@ export default {
   name: 'SubHeader',
   components: {
     
+  },
+  methods: {
+      searchRider() {
+        alert("샘플에서는 사용할 수 없습니다.");
+      }
   }
 }
 </script>
